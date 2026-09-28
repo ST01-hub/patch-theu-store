@@ -1,74 +1,42 @@
-# 🧵 THÊUCRAFT Studio - Website Bán Patch Thêu & Đặt Thêu Theo Yêu Cầu
+# 🧵 VALEE - Vintage & Embroidery Clothing
 
-Website thương mại điện tử chuyên biệt và độc đáo dành riêng cho **Patch Thêu (Phù hiệu thêu ủi nhiệt, gai dán Velcro, may viền, sticker)** trên áo khoác Jean denim, bomber, balo, mũ nón streetwear.
+Thương hiệu thời trang thêu & xưởng sản xuất patch thêu ủi nhiệt, gai velcro, may viền phong cách vintage cổ điển.
 
----
-
-## 🌟 Các Tính Năng Nổi Bật
-
-1. **Phòng Thử Patch Lên Áo Trực Quan (Interactive Patch Studio)**:
-   - Cho phép khách hàng chọn và kéo thả trực tiếp các mẫu patch lên áo khoác Jean denim thật.
-   - Thử nghiệm vị trí ngực áo, vạt áo, tay áo trước khi quyết định mua.
-   - Tự do xoay góc, phóng to / thu nhỏ kích thước.
-   - Nút **"Mua trọn combo này"** thêm toàn bộ patch đang thử vào giỏ hàng chỉ với 1 click!
-
-2. **Bộ Tính Giá & Đặt Thêu Tự Động (Custom Patch Calculator)**:
-   - Cho phép khách hàng tải ảnh thiết kế / logo riêng (câu lạc bộ xe, team nhảy, thương hiệu local brand).
-   - Chọn kích thước tùy ý (cm x cm) hoặc chọn kích thước tiêu chuẩn.
-   - Chọn loại mặt sau: Keo ủi nhiệt (Iron-on), Gai dán Velcro, May viền, Sticker dán 3M.
-   - Bảng báo giá sỉ & lẻ tức thì theo số lượng (chiết khấu tự động lên đến 70% cho đơn lớn).
-   - Tạo phiếu báo giá hoàn chỉnh để kết nối nhanh qua Zalo xưởng thêu.
-
-3. **Danh Mục & Bộ Lọc Sản Phẩm Đa Dạng**:
-   - Phân loại: Nhật Bản & Ukiyo-e, Cyberpunk & Streetwear, Cute Y2K Chibi, Retro Vũ Trụ & NASA, Tactical Quân Đội & Biker.
-   - Bộ lọc giá, sắp xếp theo bán chạy nhất, mới nhất, đánh giá cao.
-   - Modal Xem Nhanh (Quick View) hiển thị chi tiết mật độ mũi thêu (stitch count), loại sợi chỉ tơ lụa và viền merrowed.
-
-4. **Giỏ Hàng & Thanh Toán Tự Động VietQR**:
-   - Mini Cart Drawer trượt mượt mà.
-   - Thanh tiến trình freeship tự động tính số tiền cần mua thêm.
-   - Áp dụng mã giảm giá: `PATCHVIBE` (giảm 10%), `FREESHIP` (miễn phí vận chuyển 30k).
-   - Thanh toán COD hoặc quét mã **VietQR/SePay tự động sinh mã QR** kèm số tiền và mã đơn hàng chính xác.
-
-5. **Cẩm Nang & Hướng Dẫn Kỹ Thuật (Iron-On Guide)**:
-   - 4 bước ủi patch tại nhà bằng bàn ủi gia đình bền bỉ trên 50 lần giặt máy.
-   - Mục hỏi đáp thường gặp (FAQ).
-   - Lookbook đánh giá thực tế của khách hàng.
+- **Thương hiệu**: VALEE - Vintage & Embroidery Clothing
+- **Hotline / Zalo**: 0977.891.360
+- **Địa chỉ xưởng**: Gò Cát, Phường Long Trường, TP. Thủ Đức, TP.HCM
+- **Repository**: [https://github.com/ST01-hub/patch-theu-store](https://github.com/ST01-hub/patch-theu-store)
 
 ---
 
-## 🚀 Cách Mở & Sử Dụng Website
+## 🌟 Các Tính Năng Đột Phá
 
-1. **Xem trực tiếp trên máy tính**:
-   - Mở thư mục: `C:\Users\wh01l\.gemini\antigravity\scratch\patch-theu-store`
-   - Nhấp đúp chuột vào file [index.html](file:///C:/Users/wh01l/.gemini/antigravity/scratch/patch-theu-store/index.html) để mở trên trình duyệt (Google Chrome, Microsoft Edge, Cốc Cốc, Firefox, Safari).
-   - Không cần cài đặt Node.js hay Python hay build server phức tạp!
+1. **Valee Studio Thử Đồ Đa Năng (Áo & Quần, Mặt Trước & Mặt Sau)**:
+   - Hỗ trợ đầy đủ các dòng sản phẩm:
+     - 🧥 **Áo Khoác Denim Vintage** (Mặt trước & Mặt sau)
+     - 👕 **Áo Thun Cotton Vintage** (Mặt trước & Mặt sau)
+     - 🦺 **Áo Hoodie / Nỉ Cổ Điển** (Mặt trước & Mặt sau)
+     - 👖 **Quần Jean Denim** (Mặt trước & Mặt sau)
+     - 👜 **Túi Canvas Tote Vintage** (Mặt trước & Mặt sau)
+   - Lựa chọn linh hoạt **Mặt Trước (Front)** và **Mặt Sau (Back)** với tính năng lưu trữ vị trí patch riêng biệt cho từng mặt.
+   - Kéo thả mượt mà, xoay góc, phóng to thu nhỏ.
+   - Nút **"Mua trọn bộ patch này"** gom toàn bộ patch trên cả 2 mặt vào giỏ hàng chỉ trong 1 click.
 
-2. **Triển khai lên Internet (Deploy Online 1 Click)**:
-   - Dự án là Single Page Application chuẩn HTML5/CSS/JS thuần, có thể kéo thả thư mục vào **Vercel**, **Netlify**, hoặc đẩy lên **GitHub Pages** để chạy online ngay lập tức với domain miễn phí!
+2. **Bộ Nhận Diện Vintage Cao Cấp**:
+   - Sử dụng Logo chính thức của Valee với biểu tượng kim chỉ và đóa hoa cúc họa mi cổ điển.
+   - Bảng màu hoài cổ: Nền vải đũi linen, sắc vàng đồng Antique Brass, giấy da parchment và nâu trầm ấm.
+
+3. **Bộ Tính Giá & Đặt Thêu Theo Yêu Cầu (Custom On-Demand)**:
+   - Nhận đặt thêu sỉ & lẻ từ 1 chiếc cho cá nhân đến local brand, câu lạc bộ.
+   - Tự động báo giá và tạo phiếu liên hệ trực tiếp qua Zalo `0977891360`.
+
+4. **Giỏ Hàng Drawer & Thanh Toán VietQR Tự Động**:
+   - Tự động sinh mã VietQR với chính xác số tiền đơn hàng và tên tài khoản `VALEE EMBROIDERY`.
 
 ---
 
-## 📁 Cấu Trúc Thư Mục Dự Án
+## 🚀 Cách Chạy Trực Tiếp
 
-```
-patch-theu-store/
-├── index.html                   # Giao diện chính hoàn chỉnh
-├── README.md                    # Tài liệu hướng dẫn sử dụng & triển khai
-└── assets/
-    ├── css/
-    │   └── styles.css           # Hiệu ứng đường chỉ thêu, chất liệu vải denim, animation
-    ├── images/                  # Bộ ảnh patch thêu thực tế độ phân giải cao & áo Jean
-    │   ├── denim_jacket.jpg     # Mẫu áo Jean denim cho canvas thử đồ
-    │   ├── tiger.jpg            # Patch Hổ Hoàng Gia Nhật Bản
-    │   ├── cyber_skull.jpg      # Patch Đầu Lâu Cyberpunk Neon
-    │   ├── ramen_cat.jpg        # Patch Mèo Thần Tài Ramen Chibi
-    │   ├── astronaut.jpg        # Patch Phi Hành Gia NASA
-    │   └── retro_wave.jpg       # Patch Sóng Lừng Kanagawa
-    └── js/
-        ├── products.js          # Dữ liệu sản phẩm & phân loại mặt sau
-        ├── studio.js            # Trình mô phỏng kéo thả patch lên áo (Simulator)
-        ├── calculator.js        # Bộ tính giá sỉ & lẻ đặt thêu theo yêu cầu
-        ├── cart.js              # Giỏ hàng, mã giảm giá & thanh toán VietQR
-        └── app.js               # Điều hướng, tìm kiếm, lọc & Quick View
-```
+1. Mở file [index.html](file:///C:/Users/wh01l/.gemini/antigravity/scratch/patch-theu-store/index.html) trên trình duyệt (Chrome, Edge).
+2. Tự động đồng bộ với Vercel mỗi khi đẩy mã nguồn lên GitHub:
+   👉 **[Deploy to Vercel (1-Click)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FST01-hub%2Fpatch-theu-store)**

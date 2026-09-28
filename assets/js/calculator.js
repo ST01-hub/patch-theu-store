@@ -244,7 +244,7 @@ class PatchCalculator {
         const backingName = BACKING_TYPES[res.backing]?.name || res.backing;
         const edgeName = res.edgeType === 'merrowed' ? 'Viền vắt sổ Merrowed đệm nổi' : 'Viền cắt nhiệt Laser-Cut sắc nét';
 
-        const summaryText = `🧵 YÊU CẦU ĐẶT THÊU THEO YÊU CẦU:
+        const summaryText = `🧵 YÊU CẦU ĐẶT THÊU TẠI XƯỞNG VALEE:
 - Kích thước: ${res.width} x ${res.height} cm
 - Số lượng: ${res.quantity} cái
 - Mặt sau: ${backingName}
@@ -252,7 +252,8 @@ class PatchCalculator {
 - Đơn giá ước tính: ${formatCurrency(res.unitPrice)}/cái
 - Phí khuôn thêu vi tính: ${res.digitizingFee === 0 ? 'Miễn phí' : formatCurrency(res.digitizingFee)}
 - TỔNG CHI PHÍ: ${formatCurrency(res.total)}
-- Thời gian sản xuất: ${res.prodDays}`;
+- Thời gian sản xuất: ${res.prodDays}
+- Hotline/Zalo Valee: 0977891360 (Gò Cát, P.Long Trường, HCM)`;
 
         // Populate modal
         const modalSummary = document.getElementById('custom-order-modal-summary');

@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>THÊUCRAFT | Xưởng Patch Thêu Nghệ Thuật & Phụ Kiện Custom Số 1</title>
-    <meta name="description" content="Chuyên cung cấp và sản xuất patch thêu ủi nhiệt, gai dán velcro cho áo jean denim, balo, bomber, mũ nón. Nhận thêu sỉ & lẻ theo yêu cầu.">
+    <title>VALEE | Vintage & Embroidery Clothing - Patch Thêu Cổ Điển & Nghệ Thuật</title>
+    <meta name="description" content="VALEE - Thương hiệu thời trang thêu & xưởng sản xuất patch thêu ủi nhiệt, gai velcro, may viền phong cách vintage cổ điển cho áo jean, áo thun, hoodie, quần jean, túi tote. Hotline: 0977891360.">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -13,13 +13,15 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#f59e0b',
-                        'primary-dark': '#d97706',
-                        dark: {
-                            900: '#070a12',
-                            800: '#0d1322',
-                            700: '#151e36',
-                            600: '#1e293b'
+                        valee: {
+                            gold: '#C5A059',
+                            'gold-light': '#E2C895',
+                            'gold-dark': '#9A7736',
+                            cream: '#FAF6F0',
+                            parchment: '#F2ECE1',
+                            dark: '#1C1815',
+                            card: '#27221E',
+                            border: '#3B332C'
                         }
                     }
                 }
@@ -33,217 +35,207 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="bg-fabric text-slate-100 min-h-screen flex flex-col antialiased selection:bg-amber-500 selection:text-slate-950">
+<body class="bg-vintage-fabric text-stone-200 min-h-screen flex flex-col antialiased selection:bg-amber-600 selection:text-white">
 
-    <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-500 text-slate-950 text-xs font-bold py-2 px-4 shadow-sm">
+    <!-- Top Vintage Announcement Bar -->
+    <div class="bg-gradient-to-r from-stone-900 via-stone-850 to-stone-900 border-b border-amber-600/30 text-stone-300 text-xs py-2 px-4">
         <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center gap-2">
-                <span class="bg-black text-amber-400 text-[10px] px-2 py-0.5 rounded-full font-black uppercase tracking-wider animate-pulse">Hot Deal</span>
-                <span>🔥 Mua 3 tặng 1 mọi đơn hàng | Freeship toàn quốc từ 299K | Nhập mã: <code class="bg-black/20 px-1.5 py-0.5 rounded text-black font-extrabold tracking-wide">PATCHVIBE</code> (-10%)</span>
+                <span class="bg-amber-600/20 text-amber-300 border border-amber-500/40 text-[10px] px-2.5 py-0.5 rounded-full font-serif-italic font-bold tracking-wider">
+                    Valee Atelier
+                </span>
+                <span class="text-stone-300">🌿 Chào mừng bạn đến với <b class="text-amber-300">VALEE</b> • Nghệ thuật thêu thủ công & Patch Vintage • Freeship toàn quốc từ 299K</span>
             </div>
-            <div class="hidden md:flex items-center gap-4 text-[11px]">
-                <span class="flex items-center gap-1.5"><i class="fa-solid fa-truck-fast"></i> Giao nhanh 24-48h</span>
-                <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-check"></i> Bảo hành keo ủi 12 tháng</span>
-                <a href="tel:0988776655" class="hover:underline flex items-center gap-1 font-black"><i class="fa-solid fa-phone"></i> Hotline: 0988.776.655</a>
+            <div class="hidden md:flex items-center gap-5 text-[11px] text-stone-400">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-amber-500"></i> Gò Cát, P.Long Trường, HCM</span>
+                <a href="tel:0977891360" class="hover:text-amber-300 flex items-center gap-1.5 font-bold text-amber-400 transition-colors">
+                    <i class="fa-solid fa-phone"></i> Hotline / Zalo: 0977.891.360
+                </a>
             </div>
         </div>
     </div>
 
     <!-- Header & Navigation -->
-    <header class="sticky top-0 z-40 bg-slate-950/85 backdrop-blur-md border-b border-slate-800/80">
+    <header class="sticky top-0 z-40 bg-stone-950/90 backdrop-blur-md border-b border-stone-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
             
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 to-amber-300 flex items-center justify-center text-slate-950 font-black text-2xl shadow-lg shadow-amber-500/20 group-hover:rotate-6 transition-transform">
-                    <i class="fa-solid fa-shapes"></i>
+            <!-- Brand Logo & Name -->
+            <a href="#" class="flex items-center gap-3.5 group">
+                <div class="relative w-12 h-12 rounded-xl overflow-hidden border border-amber-500/40 shadow-lg group-hover:border-amber-400 transition-all flex items-center justify-center bg-stone-900">
+                    <img src="assets/images/logo.jpg" alt="VALEE Logo" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                 </div>
                 <div>
-                    <span class="text-xl font-black tracking-wider text-white flex items-center gap-1 font-heading">
-                        THÊU<span class="text-amber-400">CRAFT</span>
-                        <span class="text-[9px] uppercase px-1.5 py-0.5 bg-amber-500/20 text-amber-300 rounded border border-amber-500/30">Studio</span>
+                    <span class="text-2xl font-black tracking-widest text-white flex items-center gap-1.5 font-vintage">
+                        VALEE
                     </span>
-                    <span class="block text-[10px] text-slate-400 font-medium tracking-tight">Xưởng Patch Thêu & Custom Streetwear</span>
+                    <span class="block text-[9.5px] uppercase tracking-widest text-amber-400/90 font-medium">
+                        Vintage & Embroidery Clothing
+                    </span>
                 </div>
             </a>
 
             <!-- Desktop Navigation Links -->
-            <nav class="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-300">
-                <a href="#catalog" class="hover:text-amber-400 transition-colors">Bộ Sưu Tập</a>
-                <a href="#studio" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
-                    <i class="fa-solid fa-shirt text-amber-400"></i> Studio Thử Áo
-                    <span class="bg-red-500 text-white text-[9px] px-1.5 py-0.2 rounded-full font-black">MỚI</span>
+            <nav class="hidden lg:flex items-center gap-7 text-xs uppercase tracking-wider font-semibold text-stone-300">
+                <a href="#catalog" class="hover:text-amber-400 transition-colors">Mẫu Thêu</a>
+                <a href="#studio" class="hover:text-amber-400 transition-colors flex items-center gap-1.5 text-amber-300">
+                    <i class="fa-solid fa-shirt text-amber-400"></i> Studio Thử Đồ (Trước & Sau)
+                    <span class="bg-amber-600 text-stone-950 text-[9px] px-1.5 py-0.2 rounded font-black">HOT</span>
                 </a>
                 <a href="#custom-calculator" class="hover:text-amber-400 transition-colors flex items-center gap-1.5">
-                    <i class="fa-solid fa-wand-magic-sparkles text-amber-400"></i> Đặt Thêu Riêng
+                    <i class="fa-solid fa-seedling text-amber-400"></i> Đặt Thêu Riêng
                 </a>
-                <a href="#iron-guide" class="hover:text-amber-400 transition-colors">Hướng Dẫn Ủi</a>
-                <a href="#reviews" class="hover:text-amber-400 transition-colors">Feedback & Lookbook</a>
+                <a href="#iron-guide" class="hover:text-amber-400 transition-colors">Cách Ủi Patch</a>
+                <a href="#about-valee" class="hover:text-amber-400 transition-colors">Về Valee</a>
                 <a href="#faqs" class="hover:text-amber-400 transition-colors">Hỏi Đáp</a>
             </nav>
 
-            <!-- Search & Actions -->
+            <!-- Search, Actions & Cart -->
             <div class="flex items-center gap-3">
-                <!-- Search bar input -->
-                <div class="relative hidden sm:block w-48 xl:w-64">
-                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
-                    <input type="text" id="search-input" placeholder="Tìm hổ, mèo, anime, velcro..." 
-                           class="w-full bg-slate-900 border border-slate-700/80 rounded-full pl-9 pr-3 py-1.5 text-xs text-slate-200 placeholder-slate-400 focus:outline-none focus:border-amber-400 transition-all">
+                <div class="relative hidden sm:block w-44 xl:w-56">
+                    <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-stone-500 text-xs"></i>
+                    <input type="text" id="search-input" placeholder="Tìm hoa, hổ, anime..." 
+                           class="w-full bg-stone-900 border border-stone-750 rounded-full pl-9 pr-3 py-1.5 text-xs text-stone-200 placeholder-stone-500 focus:outline-none focus:border-amber-400 transition-all">
                 </div>
 
-                <!-- Studio Shortcut CTA -->
-                <a href="#studio" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-800 hover:bg-slate-750 text-amber-300 border border-amber-500/30 text-xs font-semibold transition-all">
-                    <i class="fa-solid fa-shirt"></i> Thử Lên Áo
+                <!-- Studio Try-On CTA Button -->
+                <a href="#studio" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/40 text-xs font-semibold transition-all">
+                    <i class="fa-solid fa-shirt"></i> Thử Lên Áo Quần
                 </a>
 
                 <!-- Cart Button -->
-                <button onclick="window.cartStore.openDrawer()" class="relative p-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700/80 text-slate-200 hover:text-amber-400 transition-colors" title="Giỏ hàng">
+                <button onclick="window.cartStore.openDrawer()" class="relative p-2.5 rounded-xl bg-stone-900 hover:bg-stone-850 border border-stone-750 text-stone-300 hover:text-amber-400 transition-colors" title="Giỏ hàng">
                     <i class="fa-solid fa-bag-shopping text-base"></i>
-                    <span id="header-cart-badge" class="absolute -top-1.5 -right-1.5 bg-amber-500 text-slate-950 font-black text-[10px] w-5 h-5 rounded-full flex items-center justify-center shadow-md hidden">0</span>
+                    <span id="header-cart-badge" class="absolute -top-1.5 -right-1.5 bg-amber-500 text-stone-950 font-black text-[10px] w-5 h-5 rounded-full flex items-center justify-center shadow-md hidden">0</span>
                 </button>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300">
+                <button id="mobile-menu-btn" class="lg:hidden p-2.5 rounded-xl bg-stone-900 border border-stone-800 text-stone-300">
                     <i class="fa-solid fa-bars text-lg"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Navigation Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-800 bg-slate-950/95 px-4 pt-3 pb-5 space-y-3">
+        <div id="mobile-menu" class="hidden lg:hidden border-t border-stone-800 bg-stone-950/95 px-4 pt-3 pb-5 space-y-3">
             <div class="relative">
-                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-stone-500 text-xs"></i>
                 <input type="text" id="mobile-search-input" placeholder="Tìm kiếm mẫu patch thêu..." 
-                       class="w-full bg-slate-900 border border-slate-700 rounded-lg pl-9 pr-3 py-2 text-xs text-slate-200">
+                       class="w-full bg-stone-900 border border-stone-750 rounded-lg pl-9 pr-3 py-2 text-xs text-stone-200">
             </div>
             <div class="flex flex-col gap-2 text-sm font-medium">
-                <a href="#catalog" class="py-1.5 text-slate-300 hover:text-amber-400">Bộ Sưu Tập Patch</a>
+                <a href="#catalog" class="py-1.5 text-stone-300 hover:text-amber-400">Bộ Sưu Tập Mẫu Thêu</a>
                 <a href="#studio" class="py-1.5 text-amber-400 font-bold flex items-center justify-between">
-                    <span><i class="fa-solid fa-shirt mr-2"></i> Studio Thử Patch Lên Áo</span>
-                    <span class="bg-red-500 text-white text-[9px] px-2 py-0.5 rounded-full">HOT</span>
+                    <span><i class="fa-solid fa-shirt mr-2"></i> Studio Thử Đồ (Áo & Quần, Trước & Sau)</span>
+                    <span class="bg-amber-600 text-stone-950 text-[9px] px-2 py-0.5 rounded font-black">HOT</span>
                 </a>
-                <a href="#custom-calculator" class="py-1.5 text-slate-300 hover:text-amber-400"><i class="fa-solid fa-wand-magic-sparkles mr-2 text-amber-400"></i> Báo Giá Đặt Thêu Riêng</a>
-                <a href="#iron-guide" class="py-1.5 text-slate-300 hover:text-amber-400">Hướng Dẫn Ủi Nhiệt</a>
-                <a href="#reviews" class="py-1.5 text-slate-300 hover:text-amber-400">Feedback & Đánh Giá</a>
-                <a href="#faqs" class="py-1.5 text-slate-300 hover:text-amber-400">Câu Hỏi Thường Gặp</a>
+                <a href="#custom-calculator" class="py-1.5 text-stone-300 hover:text-amber-400"><i class="fa-solid fa-seedling mr-2 text-amber-400"></i> Báo Giá Đặt Thêu Riêng</a>
+                <a href="#iron-guide" class="py-1.5 text-stone-300 hover:text-amber-400">Hướng Dẫn Ủi Nhiệt</a>
+                <a href="#about-valee" class="py-1.5 text-stone-300 hover:text-amber-400">Về Thương Hiệu Valee</a>
+                <a href="#faqs" class="py-1.5 text-stone-300 hover:text-amber-400">Câu Hỏi Thường Gặp</a>
             </div>
         </div>
     </header>
 
     <main class="flex-1">
 
-        <!-- Hero Section -->
-        <section class="relative pt-12 pb-20 overflow-hidden border-b border-slate-800/80">
-            <!-- Glow background ambient lights -->
-            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-amber-500/10 rounded-full blur-[120px] pointer-events-none"></div>
-            <div class="absolute top-1/3 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none"></div>
+        <!-- Hero Section - Vintage Atelier Style -->
+        <section class="relative pt-12 pb-20 overflow-hidden border-b border-stone-800">
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-600/10 rounded-full blur-[140px] pointer-events-none"></div>
 
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                     
                     <!-- Left Hero Content -->
                     <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold tracking-wide">
-                            <i class="fa-solid fa-fire text-amber-500"></i>
-                            <span>BST PATCH THÊU NGHỆ THUẬT 2026 - MUA 3 TẶNG 1</span>
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-900 border border-amber-500/40 text-amber-300 text-xs font-serif-italic">
+                            <i class="fa-solid fa-seedling text-amber-400"></i>
+                            <span>VALEE ATELIER • THỜI TRANG & NGHỆ THUẬT THÊU TAY CỔ ĐIỂN</span>
                         </div>
                         
-                        <h1 class="text-4xl sm:text-5xl xl:text-6xl font-black text-white leading-tight font-heading">
-                            BIẾN ĐỒ CŨ THÀNH <br>
-                            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-amber-200 to-yellow-500">SIÊU PHẨM STREETWEAR</span>
+                        <h1 class="text-4xl sm:text-5xl xl:text-6xl font-black text-white leading-tight font-vintage">
+                            NÉT THÊU CỔ ĐIỂN <br>
+                            <span class="text-gold-gradient">DẤU ẤN VINTAGE ĐỘC BẢN</span>
                         </h1>
                         
-                        <p class="text-base sm:text-lg text-slate-300 max-w-2xl font-normal leading-relaxed mx-auto lg:mx-0">
-                            Khám phá hàng trăm mẫu <b class="text-white">Patch Thêu ủi nhiệt</b> & <b class="text-white">Gai dán Velcro</b> cao cấp. Đường kim mũi chỉ sắc nét, màu sắc tơ lụa bền bỉ hơn 50 lần giặt máy, nâng tầm áo khoác denim, balo và nón kết của bạn trong 20 giây!
+                        <p class="text-base sm:text-lg text-stone-300 max-w-2xl font-light leading-relaxed mx-auto lg:mx-0">
+                            Chào mừng bạn đến với <b class="text-white font-semibold">VALEE</b>. Chúng tôi mang đến những mẫu patch thêu tỉ mỉ trên nền vải mộc linen, denim và cotton thô. Biến chiếc áo khoác jean cũ, áo thun, hoodie hay túi canvas thành tác phẩm nghệ thuật mang đậm phong cách cổ điển.
                         </p>
 
                         <!-- Key Selling Points Badges -->
-                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2 text-xs text-slate-300">
-                            <div class="flex items-center gap-2 bg-slate-900/80 px-3 py-2 rounded-xl border border-slate-800">
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2 text-xs text-stone-300">
+                            <div class="flex items-center gap-2 bg-stone-900/90 px-3.5 py-2 rounded-xl border border-stone-800">
                                 <i class="fa-solid fa-certificate text-amber-400 text-sm"></i>
-                                <span>24.000+ Mũi Chỉ Dệt Nổi</span>
+                                <span>Chỉ Tơ Lụa Mộc Bền Màu</span>
                             </div>
-                            <div class="flex items-center gap-2 bg-slate-900/80 px-3 py-2 rounded-xl border border-slate-800">
-                                <i class="fa-solid fa-droplet-slash text-amber-400 text-sm"></i>
-                                <span>Giặt Máy Không Bong</span>
+                            <div class="flex items-center gap-2 bg-stone-900/90 px-3.5 py-2 rounded-xl border border-stone-800">
+                                <i class="fa-solid fa-fire text-amber-400 text-sm"></i>
+                                <span>Keo Ủi Bám Dính 50+ Lần Giặt</span>
                             </div>
-                            <div class="flex items-center gap-2 bg-slate-900/80 px-3 py-2 rounded-xl border border-slate-800">
-                                <i class="fa-solid fa-clock text-amber-400 text-sm"></i>
-                                <span>Ủi Dính 20 Giây</span>
+                            <div class="flex items-center gap-2 bg-stone-900/90 px-3.5 py-2 rounded-xl border border-stone-800">
+                                <i class="fa-solid fa-compass text-amber-400 text-sm"></i>
+                                <span>Gai Velcro & May Viền</span>
                             </div>
                         </div>
 
                         <!-- CTA Action Buttons -->
                         <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
-                            <a href="#catalog" class="px-8 py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-yellow-300 text-slate-950 font-black text-sm tracking-wide shadow-xl shadow-amber-500/25 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
-                                <i class="fa-solid fa-cart-shopping"></i> Khám Phá 500+ Mẫu
+                            <a href="#catalog" class="px-8 py-4 rounded-xl bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-400 text-stone-950 font-black text-xs uppercase tracking-wider shadow-xl shadow-amber-600/20 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                                <i class="fa-solid fa-compass"></i> Khám Phá Mẫu Thêu
                             </a>
-                            <a href="#studio" class="px-8 py-4 rounded-xl bg-slate-900/90 hover:bg-slate-800 text-white font-bold text-sm border border-slate-700 hover:border-amber-400 transition-all flex items-center gap-2 group">
-                                <i class="fa-solid fa-shirt text-amber-400 group-hover:scale-110 transition-transform"></i> Thử Patch Lên Áo Ngay
+                            <a href="#studio" class="px-8 py-4 rounded-xl bg-stone-900 hover:bg-stone-850 text-white font-bold text-xs uppercase tracking-wider border border-amber-500/40 hover:border-amber-400 transition-all flex items-center gap-2">
+                                <i class="fa-solid fa-shirt text-amber-400"></i> Studio Thử Đồ Trước & Sau
                             </a>
                         </div>
                     </div>
 
-                    <!-- Right Hero Visual (Featured Hero Card with real Tiger Patch & Cyber Skull) -->
+                    <!-- Right Hero Visual (Valee Signature Badge Showcase) -->
                     <div class="lg:col-span-5 relative flex justify-center">
                         <div class="relative w-full max-w-md">
                             
-                            <!-- Ambient Decorative Backdrop Circle -->
-                            <div class="absolute -inset-4 bg-gradient-to-r from-amber-500/20 to-yellow-600/20 rounded-3xl blur-2xl -z-10"></div>
+                            <div class="absolute -inset-4 bg-amber-600/10 rounded-3xl blur-2xl -z-10"></div>
                             
-                            <!-- Main Hero Product Showcase Card -->
-                            <div class="bg-gradient-to-b from-slate-800/90 to-slate-900/90 border-2 border-amber-500/40 rounded-3xl p-6 shadow-2xl backdrop-blur-xl relative overflow-hidden">
+                            <!-- Main Showcase Card with Valee Logo Frame -->
+                            <div class="vintage-card brass-frame rounded-3xl p-6 shadow-2xl relative overflow-hidden">
                                 <div class="flex items-center justify-between mb-4">
-                                    <span class="bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
-                                        ⚡ Bán Chạy Nhất Tuần
+                                    <span class="bg-amber-600/20 text-amber-300 border border-amber-500/40 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                        ✨ Valee Signature
                                     </span>
                                     <div class="flex items-center gap-1 text-amber-400 text-xs font-bold">
-                                        <i class="fa-solid fa-star"></i> 5.0 (1.8K+ Đã Bán)
+                                        <i class="fa-solid fa-star"></i> 5.0 (Tuyệt tác)
                                     </div>
                                 </div>
 
-                                <!-- Real Tiger Patch Generated Photo -->
-                                <div class="relative aspect-square rounded-2xl overflow-hidden bg-slate-950 flex items-center justify-center p-3 border border-slate-700/60 shadow-inner group">
-                                    <img src="assets/images/tiger.jpg" alt="Patch Thêu Mãnh Hổ Hoàng Gia" class="w-full h-full object-cover rounded-xl filter drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] transition-transform duration-500 group-hover:scale-105">
-                                    <div class="absolute bottom-3 left-3 right-3 bg-slate-950/80 backdrop-blur-md p-2.5 rounded-xl border border-slate-800 flex items-center justify-between text-xs">
+                                <!-- Valee Logo / Iconic Patch -->
+                                <div class="relative aspect-square rounded-2xl overflow-hidden bg-stone-950 flex items-center justify-center p-3 border border-stone-800 shadow-inner group">
+                                    <img src="assets/images/logo.jpg" alt="Valee Logo" class="w-full h-full object-cover rounded-xl filter drop-shadow-[0_15px_25px_rgba(0,0,0,0.8)] transition-transform duration-500 group-hover:scale-105">
+                                    <div class="absolute bottom-3 left-3 right-3 bg-stone-950/85 backdrop-blur-md p-3 rounded-xl border border-stone-800 flex items-center justify-between text-xs">
                                         <div>
-                                            <span class="text-slate-400 block text-[10px]">Chỉ tơ lụa thêu nổi 3D</span>
-                                            <span class="font-bold text-white">Mãnh Hổ Hoàng Gia</span>
+                                            <span class="text-stone-400 block text-[10px]">Biểu tượng thêu hoa & kim chỉ</span>
+                                            <span class="font-bold text-white font-vintage">Valee Signature Patch</span>
                                         </div>
-                                        <span class="font-black text-amber-400 text-sm">75.000đ</span>
+                                        <span class="font-black text-amber-400 text-sm">65.000đ</span>
                                     </div>
                                 </div>
 
-                                <!-- Mini Badge Showcase underneath -->
-                                <div class="grid grid-cols-3 gap-2 mt-4">
-                                    <div class="bg-slate-900/70 p-2 rounded-xl border border-slate-800 text-center">
-                                        <span class="text-[10px] text-slate-400 block">Kích thước</span>
-                                        <b class="text-xs text-slate-100">8.5 x 8.5 cm</b>
+                                <!-- Specs row -->
+                                <div class="grid grid-cols-3 gap-2 mt-4 text-center">
+                                    <div class="bg-stone-900/80 p-2 rounded-xl border border-stone-800">
+                                        <span class="text-[10px] text-stone-400 block">Kích thước</span>
+                                        <b class="text-xs text-stone-200">7.5 x 7.5 cm</b>
                                     </div>
-                                    <div class="bg-slate-900/70 p-2 rounded-xl border border-slate-800 text-center">
-                                        <span class="text-[10px] text-slate-400 block">Mặt sau</span>
-                                        <b class="text-xs text-amber-400">Keo ủi / Gai dán</b>
+                                    <div class="bg-stone-900/80 p-2 rounded-xl border border-stone-800">
+                                        <span class="text-[10px] text-stone-400 block">Chất liệu</span>
+                                        <b class="text-xs text-amber-300">Vải đũi Linen</b>
                                     </div>
-                                    <div class="bg-slate-900/70 p-2 rounded-xl border border-slate-800 text-center">
-                                        <span class="text-[10px] text-slate-400 block">Mũi thêu</span>
-                                        <b class="text-xs text-slate-100">24.500 mũi</b>
+                                    <div class="bg-stone-900/80 p-2 rounded-xl border border-stone-800">
+                                        <span class="text-[10px] text-stone-400 block">Mặt sau</span>
+                                        <b class="text-xs text-stone-200">Ủi / Gai dán</b>
                                     </div>
                                 </div>
 
-                                <!-- Fast Add button -->
-                                <button onclick="window.cartStore.addItem(PRODUCTS[0], 'iron', 1)" class="w-full mt-4 py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shadow-amber-500/20 transition-all">
-                                    <i class="fa-solid fa-bag-shopping"></i> Thêm Vào Giỏ Hàng Ngay
+                                <button onclick="window.cartStore.addItem(PRODUCTS[5], 'iron', 1)" class="w-full mt-4 py-3 rounded-xl bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-400 text-stone-950 font-black text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all">
+                                    <i class="fa-solid fa-bag-shopping"></i> Thêm Mẫu Valee Vào Giỏ Hàng
                                 </button>
-                            </div>
-
-                            <!-- Floating Floating Tag Mini Card -->
-                            <div class="absolute -bottom-5 -left-6 bg-slate-900/95 border border-slate-700 p-3 rounded-2xl shadow-xl flex items-center gap-3 backdrop-blur-md animate-float">
-                                <img src="assets/images/ramen_cat.jpg" class="w-10 h-10 rounded-full border border-amber-400 object-cover">
-                                <div>
-                                    <p class="text-[11px] font-bold text-white">Mèo Ramen Chibi</p>
-                                    <p class="text-[10px] text-emerald-400 font-semibold">Vừa có 1 đơn mua!</p>
-                                </div>
                             </div>
 
                         </div>
@@ -253,27 +245,54 @@
             </div>
         </section>
 
-        <!-- FEATURE ĐẶC BIỆT: Interactive Patch Studio Simulator (Thử Patch Lên Áo) -->
-        <section id="studio" class="py-16 bg-slate-950/70 border-b border-slate-800 relative">
+        <!-- FEATURE ĐẶC BIỆT: STUDIO THỬ ĐỒ ĐA NĂNG (NHIỀU DÒNG ÁO, QUẦN, MẶT TRƯỚC & MẶT SAU) -->
+        <section id="studio" class="py-16 bg-stone-950 border-b border-stone-800 relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
                     <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold mb-2">
-                            <i class="fa-solid fa-magic"></i> TÍNH NĂNG TRẢI NGHIỆM ĐỘC QUYỀN
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs font-serif-italic mb-2">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> VALEE STUDIO THỬ ĐỒ TRỰC QUAN
                         </div>
-                        <h2 class="text-3xl sm:text-4xl font-black text-white font-heading">
-                            STUDIO THỬ PATCH LÊN ÁO TRỰC QUAN
+                        <h2 class="text-3xl sm:text-4xl font-black text-white font-vintage">
+                            STUDIO THỬ PATCH TRÊN ÁO & QUẦN
                         </h2>
-                        <p class="text-sm text-slate-400 mt-1 max-w-2xl">
-                            Không còn lo lắng "gắn lên có hợp không?". Bấm chọn các mẫu patch bên dưới và kéo thả trực tiếp lên áo khoác Jean denim để xem trước diện mạo trước khi mua!
+                        <p class="text-sm text-stone-400 mt-1 max-w-2xl">
+                            Dễ dàng chuyển đổi giữa các dòng <b class="text-stone-200">Áo Khoác Denim, Áo Thun, Hoodie, Quần Jean</b> và chọn xem <b class="text-amber-400">Mặt Trước</b> hoặc <b class="text-amber-400">Mặt Sau</b> để ướm thử patch chuẩn xác nhất!
                         </p>
                     </div>
 
-                    <!-- Clear / Reset Actions -->
+                    <!-- Front/Back Quick View Badge -->
                     <div class="flex items-center gap-2">
-                        <button onclick="window.patchStudio.clearAllPatches()" class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-300 text-xs font-semibold flex items-center gap-1.5 transition-colors">
-                            <i class="fa-solid fa-trash-can text-rose-400"></i> Xóa hết patch
+                        <span id="studio-current-view-badge" class="bg-amber-600/20 text-amber-300 border border-amber-500/40 text-xs px-3 py-1.5 rounded-xl font-bold">
+                            Áo Khoác Denim • Mặt Trước
+                        </span>
+                        <button onclick="window.patchStudio.clearCurrentViewPatches()" class="px-3.5 py-1.5 rounded-xl bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-400 hover:text-rose-400 text-xs transition-colors" title="Xóa patch trên mặt này">
+                            <i class="fa-solid fa-trash-can"></i> Xóa mặt này
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 1. Garment Selector Bar (Áo Denim, Áo Thun, Hoodie, Quần Jean, Túi Tote) -->
+                <div class="mb-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-stone-900/60 p-3 rounded-2xl border border-stone-800">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-bold uppercase tracking-wider text-stone-400 whitespace-nowrap">
+                            <i class="fa-solid fa-layer-group text-amber-500 mr-1"></i> Chọn dòng đồ:
+                        </span>
+                        <div id="studio-garment-tabs" class="flex flex-wrap gap-2">
+                            <!-- Populated dynamically by studio.js -->
+                        </div>
+                    </div>
+
+                    <!-- 2. Front & Back Switcher Buttons (Mặt Trước & Mặt Sau) -->
+                    <div class="flex items-center gap-1.5 bg-stone-950 p-1 rounded-xl border border-stone-800">
+                        <button type="button" id="view-front-btn" onclick="window.patchStudio.setView('front')" 
+                                class="px-4 py-2 rounded-lg text-xs font-black bg-amber-500 text-stone-950 shadow-md transition-all flex items-center gap-1.5">
+                            <i class="fa-solid fa-eye"></i> Mặt Trước
+                        </button>
+                        <button type="button" id="view-back-btn" onclick="window.patchStudio.setView('back')" 
+                                class="px-4 py-2 rounded-lg text-xs font-medium bg-stone-900/80 text-stone-300 hover:text-white transition-all flex items-center gap-1.5">
+                            <i class="fa-solid fa-rotate"></i> Mặt Sau
                         </button>
                     </div>
                 </div>
@@ -281,56 +300,56 @@
                 <!-- Studio Interactive Workspace Grid -->
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                     
-                    <!-- Left: Interactive Canvas (Denim Jacket with drag/drop patches) -->
-                    <div class="lg:col-span-8 bg-slate-900/90 rounded-3xl border border-slate-700/80 p-4 sm:p-6 shadow-2xl relative overflow-hidden">
+                    <!-- Left: Interactive Canvas Box -->
+                    <div class="lg:col-span-8 vintage-card rounded-3xl border border-stone-750 p-4 sm:p-6 shadow-2xl relative overflow-hidden">
                         
                         <!-- Toolbar Overlay on Canvas -->
-                        <div class="flex items-center justify-between mb-3 text-xs text-slate-400 bg-slate-950/60 px-4 py-2 rounded-xl border border-slate-800">
-                            <span class="flex items-center gap-2 text-slate-300">
+                        <div class="flex items-center justify-between mb-3 text-xs text-stone-400 bg-stone-950/70 px-4 py-2.5 rounded-xl border border-stone-800">
+                            <span class="flex items-center gap-2 text-stone-300">
                                 <i class="fa-solid fa-hand-pointer text-amber-400"></i>
-                                <span>Giữ chuột / ngón tay để kéo di chuyển vị trí patch</span>
+                                <span>Giữ chuột / ngón tay để kéo thả di chuyển vị trí patch</span>
                             </span>
-                            <span id="studio-patches-count" class="bg-amber-500/20 text-amber-400 px-2.5 py-0.5 rounded-full font-bold text-[11px]">
-                                2 patch trên áo
+                            <span id="studio-patches-count" class="text-stone-300 text-xs">
+                                Mặt trước: <b>2</b> | Mặt sau: <b>1</b>
                             </span>
                         </div>
 
                         <!-- Canvas Box -->
-                        <div id="studio-canvas-container" class="studio-canvas-wrap relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-slate-950 border border-slate-800 select-none">
-                            <!-- Background Denim Jacket Real Photo -->
-                            <img src="assets/images/denim_jacket.jpg" alt="Mẫu Áo Khoác Jean Denim" class="w-full h-full object-cover pointer-events-none select-none">
+                        <div id="studio-canvas-container" class="studio-canvas-box relative w-full aspect-[4/3] rounded-2xl overflow-hidden bg-stone-950 border border-stone-800 select-none">
+                            <!-- Background Garment Image (Dynamic: Denim, Tee, Hoodie, Jeans, Tote) -->
+                            <img id="studio-garment-image" src="assets/images/denim_front.jpg" alt="Mẫu Đồ Thử Patch" class="w-full h-full object-cover pointer-events-none select-none transition-opacity duration-300">
                             
                             <!-- Overlay where patches are dynamically placed and dragged -->
                             <div id="studio-patches-overlay" class="absolute inset-0"></div>
                         </div>
 
                         <!-- Bottom Patch Selector Tray -->
-                        <div class="mt-4 pt-4 border-t border-slate-800">
-                            <div class="flex items-center justify-between mb-2">
-                                <span class="text-xs font-bold text-slate-300 flex items-center gap-1.5">
-                                    <i class="fa-solid fa-plus-circle text-amber-400"></i> Bấm để ướm thử mẫu mới:
+                        <div class="mt-4 pt-4 border-t border-stone-800">
+                            <div class="flex items-center justify-between mb-2.5">
+                                <span class="text-xs font-bold text-stone-300 flex items-center gap-1.5">
+                                    <i class="fa-solid fa-plus-circle text-amber-400"></i> Bấm để ướm thử mẫu mới lên mặt này:
                                 </span>
-                                <span class="text-[11px] text-slate-400">Kéo thanh trượt bên cạnh để phóng to/thu nhỏ</span>
+                                <span class="text-[11px] text-stone-400">Có thể xoay góc & điều chỉnh kích cỡ</span>
                             </div>
                             
                             <!-- Tray items -->
-                            <div id="studio-tray" class="grid grid-cols-3 sm:grid-cols-5 gap-3">
+                            <div id="studio-tray" class="grid grid-cols-3 sm:grid-cols-6 gap-2.5">
                                 <!-- Populated dynamically by studio.js -->
                             </div>
                         </div>
 
                     </div>
 
-                    <!-- Right: Control Panel & Checkout Combo -->
+                    <!-- Right: Control Panel & Summary -->
                     <div class="lg:col-span-4 space-y-4">
                         
                         <!-- Selected Patches Box -->
-                        <div class="bg-slate-900/90 rounded-3xl border border-slate-700/80 p-5 shadow-xl">
-                            <div class="flex items-center justify-between border-b border-slate-800 pb-3 mb-3">
-                                <h3 class="text-sm font-bold text-white flex items-center gap-2">
-                                    <i class="fa-solid fa-layer-group text-amber-400"></i> Các Patch Đang Thử
+                        <div class="vintage-card rounded-3xl border border-stone-750 p-5 shadow-xl">
+                            <div class="flex items-center justify-between border-b border-stone-800 pb-3 mb-3">
+                                <h3 class="text-sm font-bold text-white flex items-center gap-2 font-vintage">
+                                    <i class="fa-solid fa-layer-group text-amber-400"></i> Danh Sách Patch Đang Thử
                                 </h3>
-                                <span class="text-xs text-slate-400">Tùy chỉnh</span>
+                                <span class="text-xs text-stone-400">Tùy biến</span>
                             </div>
 
                             <!-- List of items placed on garment -->
@@ -339,34 +358,34 @@
                             </div>
 
                             <!-- Active patch resize control -->
-                            <div class="mt-4 pt-3 border-t border-slate-800">
-                                <div class="flex justify-between text-xs text-slate-300 mb-1">
+                            <div class="mt-4 pt-3 border-t border-stone-800">
+                                <div class="flex justify-between text-xs text-stone-300 mb-1">
                                     <span>Kích thước patch đang chọn:</span>
                                     <span class="text-amber-400 font-bold"><i class="fa-solid fa-expand text-[10px]"></i> Zoom</span>
                                 </div>
-                                <input type="range" id="studio-size-slider" min="60" max="180" value="100" class="w-full accent-amber-500 bg-slate-800 rounded-lg cursor-pointer">
+                                <input type="range" id="studio-size-slider" min="60" max="180" value="100" class="w-full accent-amber-500 bg-stone-800 rounded-lg cursor-pointer">
                             </div>
 
-                            <!-- Combo Cost Summary -->
-                            <div class="mt-5 p-4 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-3">
-                                <div class="flex justify-between items-center text-xs text-slate-400">
-                                    <span>Tổng tiền patch trên áo:</span>
-                                    <span id="studio-total-price" class="text-xl font-black text-amber-400">0đ</span>
+                            <!-- Combo Cost Summary (Sums both Front and Back patches!) -->
+                            <div class="mt-5 p-4 rounded-2xl bg-stone-950 border border-stone-800 space-y-3">
+                                <div class="flex justify-between items-center text-xs text-stone-400">
+                                    <span>Tổng tiền patch (Cả trước & sau):</span>
+                                    <span id="studio-total-price" class="text-xl font-black text-amber-400 font-vintage">0đ</span>
                                 </div>
                                 <p class="text-[11px] text-emerald-400 flex items-center gap-1.5">
-                                    <i class="fa-solid fa-tag"></i> Tặng kèm giấy nến & kim chỉ chuyên dụng
+                                    <i class="fa-solid fa-check"></i> Đầy đủ keo ủi nhiệt + kim chỉ vintage đi kèm
                                 </p>
-                                <button id="studio-add-all-btn" onclick="window.patchStudio.addAllToCart()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-yellow-300 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg shadow-amber-500/20 transition-all flex items-center justify-center gap-2">
-                                    <i class="fa-solid fa-cart-arrow-down"></i> Mua Trọn Combo Này
+                                <button id="studio-add-all-btn" onclick="window.patchStudio.addAllToCart()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-400 text-stone-950 font-black text-xs uppercase tracking-wider shadow-lg shadow-amber-600/20 transition-all flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-cart-arrow-down"></i> Mua Trọn Bộ Patch Này
                                 </button>
                             </div>
 
                         </div>
 
-                        <!-- 4 Quick steps to iron info box -->
-                        <div class="bg-slate-900/50 rounded-2xl border border-slate-800/80 p-4 text-xs text-slate-400 space-y-2">
-                            <span class="font-bold text-slate-200 block text-xs"><i class="fa-solid fa-circle-info text-amber-400 mr-1.5"></i> Bạn đã biết chưa?</span>
-                            <p>Tất cả patch đều có sẵn lớp keo nhiệt của Đức ở mặt sau. Khi nhận hàng chỉ cần dùng bàn ủi tại nhà áp nhiệt trong 20s là dính chắc tuyệt đối!</p>
+                        <!-- Atelier Notice Box -->
+                        <div class="bg-stone-900/50 rounded-2xl border border-stone-800 p-4 text-xs text-stone-400 space-y-2">
+                            <span class="font-bold text-stone-200 block text-xs"><i class="fa-solid fa-circle-info text-amber-400 mr-1.5"></i> Xưởng Valee gợi ý:</span>
+                            <p>Bạn có thể thử gắn các mẫu nhỏ ở ngực áo (Mặt Trước), và chọn mẫu lớn như Sóng Phú Sĩ hay Phi Hành Gia ở lưng áo (Mặt Sau) để tạo nên tổng thể hài hòa nhất!</p>
                         </div>
 
                     </div>
@@ -380,19 +399,19 @@
         <section id="catalog" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center max-w-3xl mx-auto mb-10">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold mb-3">
-                    <i class="fa-solid fa-box-open"></i> BỘ SƯU TẬP MỚI NHẤT
+                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-stone-900 border border-amber-500/40 text-amber-300 text-xs font-serif-italic mb-3">
+                    <i class="fa-solid fa-seedling"></i> BỘ SƯU TẬP VALEE ATELIER
                 </div>
-                <h2 class="text-3xl sm:text-4xl font-black text-white font-heading">
-                    KHO PATCH THÊU ĐA DẠNG PHONG CÁCH
+                <h2 class="text-3xl sm:text-4xl font-black text-white font-vintage">
+                    KHO MẪU THÊU NGHỆ THUẬT & VINTAGE
                 </h2>
-                <p class="text-sm text-slate-400 mt-2">
-                    Từ biểu tượng Anime, Ukiyo-e Nhật Bản, Streetwear Cyberpunk đến phong cách Retro NASA và Tactical Quân đội. Dễ dàng ủi hoặc dán trên mọi chất liệu.
+                <p class="text-sm text-stone-400 mt-2">
+                    Từng đường kim mũi chỉ được thực hiện tỉ mỉ, sợi tơ lụa bền màu, phù hợp cho mọi tín đồ thời trang hoài cổ và streetwear hiện đại.
                 </p>
             </div>
 
             <!-- Filters Bar -->
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4 pb-6 border-b border-slate-800">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 pb-6 border-b border-stone-800">
                 
                 <!-- Category Buttons Horizontal Scroll -->
                 <div id="category-filter-buttons" class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 no-scrollbar">
@@ -401,10 +420,10 @@
 
                 <!-- Sort & Count -->
                 <div class="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end">
-                    <span id="catalog-count-badge" class="text-xs text-slate-400 font-medium">8 mẫu</span>
+                    <span id="catalog-count-badge" class="text-xs text-stone-400 font-medium">8 mẫu</span>
                     <div class="flex items-center gap-2">
-                        <label for="product-sort-select" class="text-xs text-slate-400 whitespace-nowrap">Sắp xếp:</label>
-                        <select id="product-sort-select" class="bg-slate-900 border border-slate-700 text-xs text-slate-200 rounded-lg px-3 py-1.5 focus:outline-none focus:border-amber-400">
+                        <label for="product-sort-select" class="text-xs text-stone-400 whitespace-nowrap">Sắp xếp:</label>
+                        <select id="product-sort-select" class="bg-stone-900 border border-stone-750 text-xs text-stone-200 rounded-lg px-3 py-1.5 focus:outline-none focus:border-amber-400">
                             <option value="popular">Bán chạy nhất</option>
                             <option value="price-asc">Giá tăng dần</option>
                             <option value="price-desc">Giá giảm dần</option>
@@ -423,45 +442,45 @@
         </section>
 
         <!-- SECTION: Đặt Thêu Theo Yêu Cầu (Custom Patch Calculator) -->
-        <section id="custom-calculator" class="py-16 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 border-y border-slate-800 relative">
+        <section id="custom-calculator" class="py-16 bg-stone-950 border-y border-stone-800 relative">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
                 <div class="text-center max-w-3xl mx-auto mb-12">
-                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold mb-3">
-                        <i class="fa-solid fa-scissors"></i> XƯỞNG THÊU VI TÍNH THEO YÊU CẦU
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-stone-900 border border-amber-500/40 text-amber-300 text-xs font-serif-italic mb-3">
+                        <i class="fa-solid fa-scissors"></i> XƯỞNG MAY & THÊU VALEE
                     </div>
-                    <h2 class="text-3xl sm:text-4xl font-black text-white font-heading">
-                        BỘ TÍNH GIÁ & ĐẶT THÊU TỰ ĐỘNG
+                    <h2 class="text-3xl sm:text-4xl font-black text-white font-vintage">
+                        BÁO GIÁ ĐẶT THÊU THEO YÊU CẦU
                     </h2>
-                    <p class="text-sm text-slate-400 mt-2">
-                        Bạn có logo câu lạc bộ xe, team nhảy, thương hiệu local brand hay hình tự vẽ? Nhập kích thước & số lượng để xem báo giá sỉ - lẻ tức thì!
+                    <p class="text-sm text-stone-400 mt-2">
+                        Nhận may và thêu logo, phù hiệu theo yêu cầu từ 1 chiếc cho cá nhân đến số lượng lớn cho local brand, câu lạc bộ và sự kiện.
                     </p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                     
                     <!-- Left Form Options -->
-                    <div class="lg:col-span-7 bg-slate-900/80 rounded-3xl border border-slate-700/80 p-6 sm:p-8 shadow-xl space-y-6">
+                    <div class="lg:col-span-7 vintage-card rounded-3xl border border-stone-750 p-6 sm:p-8 shadow-xl space-y-6">
                         
                         <!-- 1. Upload Logo Design -->
                         <div>
-                            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">
+                            <label class="block text-xs font-bold text-stone-200 uppercase tracking-wider mb-2 font-vintage">
                                 1. Tải lên hình ảnh thiết kế / Logo của bạn
                             </label>
                             
-                            <div id="calc-dropzone" class="border-2 border-dashed border-slate-700 hover:border-amber-400/80 rounded-2xl p-6 text-center cursor-pointer transition-colors bg-slate-950/60">
+                            <div id="calc-dropzone" class="border-2 border-dashed border-stone-700 hover:border-amber-400/80 rounded-2xl p-6 text-center cursor-pointer transition-colors bg-stone-950/60">
                                 <input type="file" id="calc-file-input" class="hidden" accept="image/*">
                                 
                                 <div id="calc-dropzone-prompt" class="space-y-2">
-                                    <div class="w-12 h-12 rounded-full bg-slate-800 text-amber-400 flex items-center justify-center mx-auto text-xl border border-slate-700">
+                                    <div class="w-12 h-12 rounded-full bg-stone-900 text-amber-400 flex items-center justify-center mx-auto text-xl border border-stone-800">
                                         <i class="fa-solid fa-cloud-arrow-up"></i>
                                     </div>
-                                    <div class="text-xs text-slate-300 font-semibold">Kéo & thả file thiết kế vào đây hoặc <span class="text-amber-400 underline">chọn từ máy tính</span></div>
-                                    <p class="text-[11px] text-slate-400">Hỗ trợ PNG, JPG, PSD, AI, SVG (Ảnh rõ nét sẽ cho đường thêu đẹp nhất)</p>
+                                    <div class="text-xs text-stone-300 font-semibold">Kéo & thả file vào đây hoặc <span class="text-amber-400 underline">chọn từ thiết bị</span></div>
+                                    <p class="text-[11px] text-stone-400">Hỗ trợ PNG, JPG, PSD, AI, SVG (Valee sẽ xử lý chuẩn hóa file thêu cho bạn)</p>
                                 </div>
 
                                 <div id="calc-preview-container" class="hidden flex items-center justify-center gap-4">
-                                    <img id="calc-preview-img" src="" class="w-20 h-20 object-contain rounded-xl border border-amber-400/50 bg-slate-900 p-1">
+                                    <img id="calc-preview-img" src="" class="w-20 h-20 object-contain rounded-xl border border-amber-400/50 bg-stone-900 p-1">
                                     <div class="text-left text-xs">
                                         <span class="text-emerald-400 font-bold block"><i class="fa-solid fa-circle-check"></i> Đã tải ảnh lên</span>
                                         <button type="button" onclick="window.patchCalc.removeUploadedFile(event)" class="text-rose-400 hover:underline text-[11px] mt-1">
@@ -474,74 +493,71 @@
 
                         <!-- 2. Kích thước (Dimensions) -->
                         <div>
-                            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">
+                            <label class="block text-xs font-bold text-stone-200 uppercase tracking-wider mb-2 font-vintage">
                                 2. Kích thước mong muốn (Rộng x Cao cm)
                             </label>
 
                             <!-- Size Presets -->
-                            <div id="calc-size-presets" class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-3">
-                                <!-- Populated dynamically -->
-                            </div>
+                            <div id="calc-size-presets" class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-3"></div>
 
-                            <!-- Custom Input inputs -->
-                            <div class="grid grid-cols-2 gap-3 bg-slate-950/50 p-3 rounded-xl border border-slate-800">
+                            <div class="grid grid-cols-2 gap-3 bg-stone-950 p-3 rounded-xl border border-stone-800">
                                 <div>
-                                    <span class="text-[11px] text-slate-400 block mb-1">Chiều Rộng (cm):</span>
-                                    <input type="number" id="calc-width" value="7.5" min="3" max="30" step="0.5" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-100 font-bold">
+                                    <span class="text-[11px] text-stone-400 block mb-1">Chiều Rộng (cm):</span>
+                                    <input type="number" id="calc-width" value="7.5" min="3" max="30" step="0.5" class="w-full bg-stone-900 border border-stone-750 rounded-lg px-3 py-1.5 text-xs text-stone-100 font-bold">
                                 </div>
                                 <div>
-                                    <span class="text-[11px] text-slate-400 block mb-1">Chiều Cao (cm):</span>
-                                    <input type="number" id="calc-height" value="7.5" min="3" max="30" step="0.5" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5 text-xs text-slate-100 font-bold">
+                                    <span class="text-[11px] text-stone-400 block mb-1">Chiều Cao (cm):</span>
+                                    <input type="number" id="calc-height" value="7.5" min="3" max="30" step="0.5" class="w-full bg-stone-900 border border-stone-750 rounded-lg px-3 py-1.5 text-xs text-stone-100 font-bold">
                                 </div>
                             </div>
                         </div>
 
                         <!-- 3. Kiểu Mặt Sau (Backing Options) -->
                         <div>
-                            <label class="block text-xs font-bold text-slate-200 uppercase tracking-wider mb-2">
+                            <label class="block text-xs font-bold text-stone-200 uppercase tracking-wider mb-2 font-vintage">
                                 3. Chọn loại mặt sau (Backing)
                             </label>
                             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                                <button type="button" onclick="window.patchCalc.setBacking('iron')" class="p-3 rounded-xl border border-slate-700 bg-slate-950 hover:border-amber-400 text-left text-xs transition-all focus:ring-2 focus:ring-amber-500">
+                                <button type="button" onclick="window.patchCalc.setBacking('iron')" class="p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all focus:ring-2 focus:ring-amber-500">
                                     <i class="fa-solid fa-fire text-amber-400 mb-1 block"></i>
-                                    <div class="font-bold text-slate-200">Keo ủi nhiệt</div>
-                                    <span class="text-[10px] text-slate-400">Ủi áo, nón</span>
+                                    <div class="font-bold text-stone-200">Keo ủi nhiệt</div>
+                                    <span class="text-[10px] text-stone-400">Ủi áo, nón</span>
                                 </button>
-                                <button type="button" onclick="window.patchCalc.setBacking('velcro')" class="p-3 rounded-xl border border-slate-700 bg-slate-950 hover:border-amber-400 text-left text-xs transition-all focus:ring-2 focus:ring-amber-500">
+                                <button type="button" onclick="window.patchCalc.setBacking('velcro')" class="p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all focus:ring-2 focus:ring-amber-500">
                                     <i class="fa-solid fa-grip-lines text-amber-400 mb-1 block"></i>
-                                    <div class="font-bold text-slate-200">Gai Velcro</div>
-                                    <span class="text-[10px] text-slate-400">Cho balo, tactical</span>
+                                    <div class="font-bold text-stone-200">Gai Velcro</div>
+                                    <span class="text-[10px] text-stone-400">Cho balo, áo</span>
                                 </button>
-                                <button type="button" onclick="window.patchCalc.setBacking('sew')" class="p-3 rounded-xl border border-slate-700 bg-slate-950 hover:border-amber-400 text-left text-xs transition-all focus:ring-2 focus:ring-amber-500">
+                                <button type="button" onclick="window.patchCalc.setBacking('sew')" class="p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all focus:ring-2 focus:ring-amber-500">
                                     <i class="fa-solid fa-scissors text-amber-400 mb-1 block"></i>
-                                    <div class="font-bold text-slate-200">May viền</div>
-                                    <span class="text-[10px] text-slate-400">May trực tiếp</span>
+                                    <div class="font-bold text-stone-200">May viền</div>
+                                    <span class="text-[10px] text-stone-400">May trực tiếp</span>
                                 </button>
-                                <button type="button" onclick="window.patchCalc.setBacking('sticker')" class="p-3 rounded-xl border border-slate-700 bg-slate-950 hover:border-amber-400 text-left text-xs transition-all focus:ring-2 focus:ring-amber-500">
+                                <button type="button" onclick="window.patchCalc.setBacking('sticker')" class="p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all focus:ring-2 focus:ring-amber-500">
                                     <i class="fa-solid fa-tag text-amber-400 mb-1 block"></i>
-                                    <div class="font-bold text-slate-200">Sticker 3M</div>
-                                    <span class="text-[10px] text-slate-400">Dán nón BH, laptop</span>
+                                    <div class="font-bold text-stone-200">Sticker 3M</div>
+                                    <span class="text-[10px] text-stone-400">Dán nón BH, laptop</span>
                                 </button>
                             </div>
                         </div>
 
-                        <!-- 4. Số lượng đặt thêu (Quantity Slider / Input) -->
+                        <!-- 4. Số lượng đặt thêu -->
                         <div>
                             <div class="flex justify-between items-center mb-2">
-                                <label class="text-xs font-bold text-slate-200 uppercase tracking-wider">
+                                <label class="text-xs font-bold text-stone-200 uppercase tracking-wider font-vintage">
                                     4. Số lượng cần thêu (Cái)
                                 </label>
                                 <span class="text-xs text-amber-400 font-bold" id="calc-tier-badge">Đơn nhóm nhỏ - Giảm 30%</span>
                             </div>
 
                             <div class="flex items-center gap-3">
-                                <input type="number" id="calc-quantity" value="10" min="1" max="10000" class="w-28 bg-slate-950 border border-slate-700 rounded-xl px-4 py-2 text-sm text-amber-400 font-black text-center focus:outline-none focus:border-amber-400">
+                                <input type="number" id="calc-quantity" value="10" min="1" max="10000" class="w-28 bg-stone-950 border border-stone-750 rounded-xl px-4 py-2 text-sm text-amber-400 font-black text-center focus:outline-none focus:border-amber-400">
                                 <div class="flex flex-wrap gap-1.5 flex-1">
-                                    <button type="button" onclick="window.patchCalc.setQuantity(1)" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 rounded-lg text-xs font-semibold">1 cái</button>
-                                    <button type="button" onclick="window.patchCalc.setQuantity(5)" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 rounded-lg text-xs font-semibold">5 cái</button>
-                                    <button type="button" onclick="window.patchCalc.setQuantity(10)" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 rounded-lg text-xs font-semibold">10 cái</button>
-                                    <button type="button" onclick="window.patchCalc.setQuantity(30)" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 rounded-lg text-xs font-semibold">30 cái</button>
-                                    <button type="button" onclick="window.patchCalc.setQuantity(100)" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 rounded-lg text-xs font-semibold">100+ cái</button>
+                                    <button type="button" onclick="window.patchCalc.setQuantity(1)" class="px-3 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold">1 cái</button>
+                                    <button type="button" onclick="window.patchCalc.setQuantity(5)" class="px-3 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold">5 cái</button>
+                                    <button type="button" onclick="window.patchCalc.setQuantity(10)" class="px-3 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold">10 cái</button>
+                                    <button type="button" onclick="window.patchCalc.setQuantity(30)" class="px-3 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold">30 cái</button>
+                                    <button type="button" onclick="window.patchCalc.setQuantity(100)" class="px-3 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold">100+ cái</button>
                                 </div>
                             </div>
                         </div>
@@ -550,55 +566,53 @@
 
                     <!-- Right Quote Card -->
                     <div class="lg:col-span-5 sticky top-24">
-                        <div class="bg-gradient-to-b from-slate-900 to-slate-950 rounded-3xl border-2 border-amber-500/50 p-6 sm:p-8 shadow-2xl space-y-6">
+                        <div class="vintage-card brass-frame rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6">
                             
-                            <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+                            <div class="flex items-center justify-between border-b border-stone-800 pb-4">
                                 <div>
-                                    <span class="text-xs text-slate-400 block">Bảng báo giá dự toán</span>
-                                    <h3 class="text-lg font-black text-white">XƯỞNG THÊUCRAFT</h3>
+                                    <span class="text-xs text-stone-400 block font-serif-italic">Bảng báo giá dự toán</span>
+                                    <h3 class="text-xl font-black text-white font-vintage">VALEE ATELIER</h3>
                                 </div>
-                                <span class="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">
-                                    Giá Gốc Tại Xưởng
+                                <span class="bg-amber-600/20 text-amber-300 border border-amber-500/40 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase">
+                                    Xưởng Thủ Đức
                                 </span>
                             </div>
 
-                            <!-- Detailed Quote Breakdown -->
                             <div class="space-y-3 text-xs">
                                 <div class="flex justify-between items-center">
-                                    <span class="text-slate-400">Đơn giá ước tính mỗi cái:</span>
+                                    <span class="text-stone-400">Đơn giá ước tính:</span>
                                     <span id="calc-unit-price" class="text-sm font-bold text-white">45.000đ</span>
                                 </div>
                                 <div class="flex justify-between items-center">
-                                    <span class="text-slate-400">Phí ra film thêu vi tính (Khuôn):</span>
-                                    <span id="calc-digitizing-fee" class="text-slate-300 font-medium">MIỄN PHÍ</span>
+                                    <span class="text-stone-400">Phí ra film thêu vi tính:</span>
+                                    <span id="calc-digitizing-fee" class="text-stone-300 font-medium">MIỄN PHÍ</span>
                                 </div>
                                 <div class="flex justify-between items-center">
-                                    <span class="text-slate-400">Thời gian sản xuất dự kiến:</span>
-                                    <span id="calc-prod-days" class="text-slate-200 font-semibold">2 - 3 ngày làm việc</span>
+                                    <span class="text-stone-400">Thời gian sản xuất:</span>
+                                    <span id="calc-prod-days" class="text-stone-200 font-semibold">2 - 3 ngày</span>
                                 </div>
                                 <div class="flex justify-between items-center">
-                                    <span class="text-slate-400">Chính sách bảo hành:</span>
-                                    <span class="text-emerald-400 font-semibold">1 đổi 1 nếu lỗi đường chỉ</span>
+                                    <span class="text-stone-400">Xưởng sản xuất:</span>
+                                    <span class="text-amber-300 font-semibold">Gò Cát, P.Long Trường, HCM</span>
                                 </div>
                             </div>
 
-                            <!-- Total -->
-                            <div class="pt-4 border-t border-slate-800 bg-slate-950/80 -mx-6 -mb-6 p-6 rounded-b-3xl">
+                            <div class="pt-4 border-t border-stone-800 bg-stone-950/80 -mx-6 -mb-6 p-6 rounded-b-3xl">
                                 <div class="flex justify-between items-baseline mb-4">
                                     <div>
-                                        <span class="text-xs text-slate-400 block">TỔNG CHI PHÍ TẠM TÍNH:</span>
-                                        <span class="text-[10px] text-slate-400">(Chưa bao gồm VAT nếu cần)</span>
+                                        <span class="text-xs text-stone-400 block">TỔNG CHI PHÍ TẠM TÍNH:</span>
+                                        <span class="text-[10px] text-stone-400">(Hotline: 0977.891.360)</span>
                                     </div>
-                                    <span id="calc-total-price" class="text-2xl sm:text-3xl font-black text-amber-400 font-heading">
+                                    <span id="calc-total-price" class="text-2xl sm:text-3xl font-black text-amber-400 font-vintage">
                                         450.000đ
                                     </span>
                                 </div>
 
-                                <button type="button" onclick="window.patchCalc.submitCustomOrder()" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-yellow-300 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg shadow-amber-500/25 transition-all flex items-center justify-center gap-2">
-                                    <i class="fa-solid fa-paper-plane"></i> Gửi Yêu Cầu & Nhận Mẫu Thử
+                                <button type="button" onclick="window.patchCalc.submitCustomOrder()" class="w-full py-4 rounded-xl bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-400 text-stone-950 font-black text-xs uppercase tracking-wider shadow-lg shadow-amber-600/20 transition-all flex items-center justify-center gap-2">
+                                    <i class="fa-solid fa-paper-plane"></i> Gửi Yêu Cầu Cho Xưởng Valee
                                 </button>
-                                <p class="text-center text-[10px] text-slate-400 mt-3">
-                                    Đội ngũ Designer sẽ liên hệ qua Zalo trong vòng 15 phút để gửi bản demo mẫu thêu 3D hoàn toàn miễn phí.
+                                <p class="text-center text-[10px] text-stone-400 mt-3">
+                                    Đội ngũ Valee sẽ phản hồi trực tiếp qua Zalo 0977891360 để gửi bản demo mẫu thêu miễn phí.
                                 </p>
                             </div>
 
@@ -613,146 +627,98 @@
         <!-- SECTION: Hướng Dẫn Ủi Patch Chuẩn 4 Bước Tại Nhà -->
         <section id="iron-guide" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold mb-3">
-                    <i class="fa-solid fa-fire-burner"></i> HƯỚNG DẪN CHI TIẾT
+                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-stone-900 border border-amber-500/40 text-amber-300 text-xs font-serif-italic mb-3">
+                    <i class="fa-solid fa-fire"></i> KỸ THUẬT ỦI VINTAGE
                 </div>
-                <h2 class="text-3xl sm:text-4xl font-black text-white font-heading">
-                    CÁCH ỦI PATCH DÍNH CHẮC 100% TẠI NHÀ
+                <h2 class="text-3xl sm:text-4xl font-black text-white font-vintage">
+                    HƯỚNG DẪN ỦI PATCH BỀN ĐẸP TẠI NHÀ
                 </h2>
-                <p class="text-sm text-slate-400 mt-2">
-                    Chỉ cần 1 chiếc bàn ủi gia đình thông thường, bạn có thể tự tay làm mới chiếc áo denim hay balo yêu thích của mình chỉ trong 2 phút!
+                <p class="text-sm text-stone-400 mt-2">
+                    Chỉ cần 1 chiếc bàn ủi thông thường tại nhà, bạn có thể tự tay đính các mẫu patch lên áo jean, quần jean hay áo thun siêu bền.
                 </p>
             </div>
 
             <!-- 4 Steps Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-                <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 relative group hover:border-amber-400/50 transition-all">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-black mb-4 border border-amber-500/20">
+                <div class="vintage-card p-6 rounded-2xl relative group hover:border-amber-400/60 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-black mb-4 border border-amber-500/30 font-vintage">
                         01
                     </div>
-                    <h3 class="text-base font-bold text-white mb-2">Làm Nóng Bàn Ủi</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Cắm bàn ủi và chỉnh nhiệt độ ở mức <b>150 - 160°C</b> (chế độ Cotton). <span class="text-amber-400 font-semibold">TẮT chế độ phun hơi nước</span> để keo bám dính tốt nhất.
+                    <h3 class="text-base font-bold text-white mb-2 font-vintage">Làm Nóng Bàn Ủi</h3>
+                    <p class="text-xs text-stone-400 leading-relaxed">
+                        Chỉnh nhiệt độ bàn ủi ở mức <b>150 - 160°C</b> (chế độ Cotton). <span class="text-amber-400 font-semibold">TẮT chế độ phun hơi nước</span>.
                     </p>
                 </div>
 
-                <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 relative group hover:border-amber-400/50 transition-all">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-black mb-4 border border-amber-500/20">
+                <div class="vintage-card p-6 rounded-2xl relative group hover:border-amber-400/60 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-black mb-4 border border-amber-500/30 font-vintage">
                         02
                     </div>
-                    <h3 class="text-base font-bold text-white mb-2">Định Vị & Phủ Vải</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Ủi phẳng bề mặt áo. Đặt patch vào vị trí mong muốn, sau đó phủ lên trên 1 tấm <b class="text-white">vải cotton mỏng hoặc giấy nến</b> để bảo vệ sợi chỉ thêu.
+                    <h3 class="text-base font-bold text-white mb-2 font-vintage">Định Vị & Phủ Vải</h3>
+                    <p class="text-xs text-stone-400 leading-relaxed">
+                        Đặt patch vào vị trí mong muốn (ngực, bắp tay, lưng). Phủ lên trên 1 tấm <b class="text-white">vải cotton mỏng hoặc giấy nến</b>.
                     </p>
                 </div>
 
-                <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 relative group hover:border-amber-400/50 transition-all">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-black mb-4 border border-amber-500/20">
+                <div class="vintage-card p-6 rounded-2xl relative group hover:border-amber-400/60 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-black mb-4 border border-amber-500/30 font-vintage">
                         03
                     </div>
-                    <h3 class="text-base font-bold text-white mb-2">Ép Chặt 20-30 Giây</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Dùng lực ấn mạnh bàn ủi vuông góc đều lên bề mặt patch trong <b>20 - 30 giây</b> (chú ý ấn kỹ các góc mép). Không rê qua rê lại bàn ủi.
+                    <h3 class="text-base font-bold text-white mb-2 font-vintage">Ép Chặt 20-30 Giây</h3>
+                    <p class="text-xs text-stone-400 leading-relaxed">
+                        Dùng lực ấn mạnh bàn ủi vuông góc đều lên bề mặt patch trong <b>25 giây</b>, miết kỹ các góc viền merrowed.
                     </p>
                 </div>
 
-                <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 relative group hover:border-amber-400/50 transition-all">
-                    <div class="w-12 h-12 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-black mb-4 border border-amber-500/20">
+                <div class="vintage-card p-6 rounded-2xl relative group hover:border-amber-400/60 transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl font-black mb-4 border border-amber-500/30 font-vintage">
                         04
                     </div>
-                    <h3 class="text-base font-bold text-white mb-2">Lộn Trái & Để Nguội</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Lộn mặt trái áo ủi thêm <b>15 giây</b> để keo thẩm thấu sâu vào sợi vải. <span class="text-emerald-400 font-semibold">Để nguội hoàn toàn trong 10 phút</span> trước khi mặc hay giặt.
+                    <h3 class="text-base font-bold text-white mb-2 font-vintage">Lộn Trái & Để Nguội</h3>
+                    <p class="text-xs text-stone-400 leading-relaxed">
+                        Lộn mặt trái áo ủi thêm <b>15 giây</b> để keo ngấm sâu vào sợi vải. <span class="text-emerald-400 font-semibold">Để nguội hoàn toàn 15 phút</span> trước khi mặc.
                     </p>
                 </div>
 
             </div>
         </section>
 
-        <!-- Customer Reviews & Lookbook Gallery -->
-        <section id="reviews" class="py-16 bg-slate-950/60 border-t border-slate-800">
+        <!-- SECTION: Giới Thiệu Về Valee & Lookbook -->
+        <section id="about-valee" class="py-16 bg-stone-950/70 border-t border-stone-800">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 
-                <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-10">
-                    <div>
-                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold mb-2">
-                            <i class="fa-solid fa-camera"></i> LOOKBOOK & FEEDBACK
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="vintage-card brass-frame p-6 rounded-3xl max-w-sm text-center">
+                            <img src="assets/images/logo.jpg" alt="VALEE Workshop" class="w-48 h-48 mx-auto object-cover rounded-2xl border border-amber-500/30 shadow-xl mb-4">
+                            <h3 class="text-xl font-black text-white font-vintage">VALEE CLOTHING</h3>
+                            <p class="text-xs text-amber-400/90 font-serif-italic mt-1">Vintage & Embroidery Clothing</p>
+                            <p class="text-xs text-stone-400 mt-3 leading-relaxed">
+                                Xưởng may và thêu tọa lạc tại Gò Cát, P.Long Trường, HCM. Chuyên phụ kiện thêu thủ công & giải pháp custom trang phục vintage.
+                            </p>
                         </div>
-                        <h2 class="text-3xl font-black text-white font-heading">
-                            KHÁCH HÀNG NÓI GÌ VỀ THÊUCRAFT?
+                    </div>
+
+                    <div class="lg:col-span-7 space-y-4">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-stone-900 border border-amber-500/40 text-amber-300 text-xs font-serif-italic">
+                            <i class="fa-solid fa-heart text-amber-400"></i> CÂU CHUYỆN THƯƠNG HIỆU
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-black text-white font-vintage">
+                            NGHỆ THUẬT THÊU ĐƯỢC CHĂM CHÚT BỞI VALEE
                         </h2>
-                    </div>
-
-                    <div class="flex items-center gap-2">
-                        <div class="flex text-amber-400 text-sm">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                        <span class="text-sm font-bold text-white">4.96/5.0</span>
-                        <span class="text-xs text-slate-400">(Hơn 3.400+ đánh giá 5 sao)</span>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    
-                    <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-amber-500/20 text-amber-400 font-bold flex items-center justify-center text-sm">
-                                TH
-                            </div>
-                            <div>
-                                <h4 class="text-xs font-bold text-white">Trần Hoàng Minh</h4>
-                                <span class="text-[10px] text-slate-400">Đã mua Patch Hổ Hoàng Gia & Cyber Skull</span>
-                            </div>
-                        </div>
-                        <div class="flex text-amber-400 text-xs">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            "Mũi thêu cực kỳ nét, dày dặn hơn nhiều so với mấy chỗ mua trên sàn cam sàn xanh. Mình ủi lên áo Jean Levi's đi phượt mưa gió rồi giặt máy 3 lần vẫn dính chắc nịch. Quá hài lòng!"
+                        <p class="text-sm text-stone-300 leading-relaxed">
+                            Tại Valee, chúng tôi tin rằng mỗi chiếc áo khoác, chiếc quần jean hay túi tote đều mang một câu chuyện riêng. Thay vì mua một món đồ mới đại trà, việc gắn thêm một chiếc patch thêu tỉ mỉ sẽ biến món đồ ấy trở thành dấu ấn độc bản của chính bạn.
                         </p>
-                    </div>
-
-                    <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-purple-500/20 text-purple-400 font-bold flex items-center justify-center text-sm">
-                                LN
-                            </div>
-                            <div>
-                                <h4 class="text-xs font-bold text-white">Lê Ngọc Mai</h4>
-                                <span class="text-[10px] text-slate-400">Đã mua Patch Mèo Ramen & Sóng Biển</span>
-                            </div>
-                        </div>
-                        <div class="flex text-amber-400 text-xs">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            "Cực kỳ thích tính năng Studio Thử Áo trên web, cho mình ướm thử vị trí trước nên dán lên balo vải canvas nhìn vừa vặn và đẹp xuất sắc luôn. Đóng gói hộp chỉn chu có kèm thiệp cảm ơn."
+                        <p class="text-sm text-stone-400 leading-relaxed">
+                            Mỗi sản phẩm của Valee đều trải qua quy trình lập trình mũi thêu kỹ lưỡng, lựa chọn sợi tơ bóng mềm và lớp keo nhiệt của Đức có độ bền giặt cao nhất.
                         </p>
-                    </div>
-
-                    <div class="bg-slate-900/80 border border-slate-800 p-6 rounded-2xl space-y-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-sm">
-                                VK
-                            </div>
-                            <div>
-                                <h4 class="text-xs font-bold text-white">Vũ Khang (Biker Club)</h4>
-                                <span class="text-[10px] text-slate-400">Đặt thêu riêng 50 patch gai Velcro</span>
-                            </div>
+                        <div class="pt-2 flex flex-wrap gap-4 text-xs font-bold text-amber-300">
+                            <span><i class="fa-solid fa-check text-amber-500 mr-1.5"></i> Xưởng thêu trực tiếp tại HCM</span>
+                            <span><i class="fa-solid fa-check text-amber-500 mr-1.5"></i> Nhận đơn từ 1 chiếc</span>
+                            <span><i class="fa-solid fa-check text-amber-500 mr-1.5"></i> Hotline: 0977891360</span>
                         </div>
-                        <div class="flex text-amber-400 text-xs">
-                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        </div>
-                        <p class="text-xs text-slate-300 leading-relaxed">
-                            "Team mình đặt 50 patch logo gắn áo giáp đi tour. Xưởng tư vấn nhiệt tình, lên mẫu film thêu nhanh trong ngày, gai dán Velcro chuẩn quân sự dính siêu chặt khi chạy tốc độ cao."
-                        </p>
                     </div>
-
                 </div>
 
             </div>
@@ -761,40 +727,40 @@
         <!-- FAQs Section -->
         <section id="faqs" class="py-16 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
-                <h2 class="text-3xl font-black text-white font-heading">
+                <h2 class="text-3xl font-black text-white font-vintage">
                     CÂU HỎI THƯỜNG GẶP (FAQ)
                 </h2>
-                <p class="text-xs text-slate-400 mt-2">Mọi giải đáp về chất liệu, độ bền keo ủi và đặt thêu số lượng lớn</p>
+                <p class="text-xs text-stone-400 mt-2">Giải đáp chi tiết từ Xưởng Valee</p>
             </div>
 
             <div class="space-y-3">
-                <div class="bg-slate-900/70 border border-slate-800 rounded-2xl overflow-hidden">
+                <div class="vintage-card rounded-2xl overflow-hidden">
                     <button class="faq-trigger w-full px-6 py-4 text-left flex justify-between items-center text-sm font-bold text-white hover:text-amber-400">
                         <span>Patch thêu ủi nhiệt giặt máy có bị bong tróc không?</span>
                         <i class="faq-icon fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
                     </button>
-                    <div class="px-6 pb-4 text-xs text-slate-400 leading-relaxed hidden">
-                        Lớp keo dán nhiệt của ThêuCraft sử dụng màng keo Hot-melt Polyamide chuyên dụng nhập khẩu, có khả năng chịu lực giặt máy trên 50 lần. Lưu ý khi giặt máy nên lộn trái áo hoặc cho vào túi giặt để giữ sợi thêu luôn sáng bóng.
+                    <div class="px-6 pb-4 text-xs text-stone-400 leading-relaxed hidden">
+                        Lớp keo dán nhiệt của Valee sử dụng màng keo Hot-melt chuyên dụng nhập khẩu, có khả năng chịu lực giặt máy trên 50 lần. Bạn chỉ cần lộn trái trang phục khi giặt để giữ độ sáng bóng của sợi chỉ thêu.
                     </div>
                 </div>
 
-                <div class="bg-slate-900/70 border border-slate-800 rounded-2xl overflow-hidden">
+                <div class="vintage-card rounded-2xl overflow-hidden">
                     <button class="faq-trigger w-full px-6 py-4 text-left flex justify-between items-center text-sm font-bold text-white hover:text-amber-400">
-                        <span>Những chất liệu vải nào ủi patch được?</span>
+                        <span>Xưởng Valee có nhận thiết kế riêng cho CLB, local brand không?</span>
                         <i class="faq-icon fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
                     </button>
-                    <div class="px-6 pb-4 text-xs text-slate-400 leading-relaxed hidden">
-                        Tất cả các loại vải chịu nhiệt tốt như Jean/Denim, Kaki, Vải Thô, Canvas, Cotton, Nỉ bông, Áo khoác dù đều ủi bám dính rất tốt. Với áo da hoặc chất liệu nylon mỏng không chịu nhiệt cao, bạn nên chọn phân loại "May Viền" hoặc "Gai Velcro".
+                    <div class="px-6 pb-4 text-xs text-stone-400 leading-relaxed hidden">
+                        Có! Valee nhận sản xuất patch thêu theo mẫu từ 1 cái đến hàng nghìn cái. Đơn từ 20 cái trở lên được miễn phí 100% chi phí lập trình khuôn film thêu vi tính.
                     </div>
                 </div>
 
-                <div class="bg-slate-900/70 border border-slate-800 rounded-2xl overflow-hidden">
+                <div class="vintage-card rounded-2xl overflow-hidden">
                     <button class="faq-trigger w-full px-6 py-4 text-left flex justify-between items-center text-sm font-bold text-white hover:text-amber-400">
-                        <span>Xưởng có nhận thêu theo yêu cầu số lượng ít (từ 1 cái) không?</span>
+                        <span>Địa chỉ xưởng Valee ở đâu và cách thức liên hệ?</span>
                         <i class="faq-icon fa-solid fa-chevron-down text-xs transition-transform duration-200"></i>
                     </button>
-                    <div class="px-6 pb-4 text-xs text-slate-400 leading-relaxed hidden">
-                        Có! ThêuCraft nhận thêu vi tính từ 1 chiếc mẫu thử cho cá nhân hoặc quà tặng độc bản. Với đơn hàng từ 20 cái trở lên, xưởng miễn phí 100% chi phí lập trình khuôn film thêu vi tính.
+                    <div class="px-6 pb-4 text-xs text-stone-400 leading-relaxed hidden">
+                        Xưởng Valee đặt tại đường Gò Cát, Phường Long Trường, TP. Thủ Đức, TP.HCM. Bạn có thể liên hệ trực tiếp qua số Hotline / Zalo: 0977891360 để được tư vấn và xem mẫu vải.
                     </div>
                 </div>
             </div>
@@ -802,40 +768,42 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-slate-950 border-t border-slate-800 pt-12 pb-8 text-xs text-slate-400">
+    <!-- Footer - Valee Vintage Branding -->
+    <footer class="bg-stone-950 border-t border-stone-800 pt-12 pb-8 text-xs text-stone-400">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div class="space-y-3">
-                <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 rounded-lg bg-amber-500 flex items-center justify-center text-slate-950 font-black">
-                        <i class="fa-solid fa-shapes"></i>
+                <div class="flex items-center gap-3">
+                    <img src="assets/images/logo.jpg" alt="VALEE Logo" class="w-10 h-10 rounded-xl object-cover border border-amber-500/40">
+                    <div>
+                        <span class="text-lg font-black text-white font-vintage">VALEE</span>
+                        <span class="block text-[9px] uppercase tracking-wider text-amber-400 font-medium">Vintage & Embroidery</span>
                     </div>
-                    <span class="text-base font-black text-white font-heading">THÊU<span class="text-amber-400">CRAFT</span></span>
                 </div>
-                <p class="text-slate-400 text-xs">
-                    Xưởng sản xuất patch thêu vi tính, phù hiệu nghệ thuật, giải pháp custom trang phục cho cá nhân & doanh nghiệp toàn quốc.
+                <p class="text-stone-400 text-xs leading-relaxed">
+                    Xưởng sản xuất patch thêu vi tính, phù hiệu nghệ thuật, giải pháp custom trang phục phong cách vintage cho cá nhân & doanh nghiệp.
                 </p>
-                <div class="flex gap-3 text-slate-300 pt-1">
-                    <a href="#" class="w-7 h-7 rounded-full bg-slate-900 hover:bg-amber-500 hover:text-slate-950 flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="w-7 h-7 rounded-full bg-slate-900 hover:bg-amber-500 hover:text-slate-950 flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="w-7 h-7 rounded-full bg-slate-900 hover:bg-amber-500 hover:text-slate-950 flex items-center justify-center transition-colors"><i class="fa-brands fa-tiktok"></i></a>
+                <div class="flex gap-3 text-stone-300 pt-1">
+                    <a href="https://zalo.me/0977891360" target="_blank" class="w-7 h-7 rounded-full bg-stone-900 hover:bg-amber-500 hover:text-stone-950 flex items-center justify-center transition-colors"><i class="fa-solid fa-comment-dots"></i></a>
+                    <a href="#" class="w-7 h-7 rounded-full bg-stone-900 hover:bg-amber-500 hover:text-stone-950 flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-7 h-7 rounded-full bg-stone-900 hover:bg-amber-500 hover:text-stone-950 flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
 
             <div>
-                <h4 class="text-sm font-bold text-white mb-3 uppercase tracking-wider">Bộ Sưu Tập</h4>
-                <ul class="space-y-2">
-                    <li><a href="#catalog" onclick="filterCategory('japanese')" class="hover:text-amber-400">Nhật Bản & Anime Ukiyo-e</a></li>
-                    <li><a href="#catalog" onclick="filterCategory('cyberpunk')" class="hover:text-amber-400">Cyberpunk & Skull Neon</a></li>
-                    <li><a href="#catalog" onclick="filterCategory('cute')" class="hover:text-amber-400">Cute Chibi & Y2K Aesthetics</a></li>
-                    <li><a href="#catalog" onclick="filterCategory('tactical')" class="hover:text-amber-400">Gai Dán Tactical & Biker</a></li>
+                <h4 class="text-xs font-bold text-white mb-3 uppercase tracking-wider font-vintage">Dòng Sản Phẩm Thêu</h4>
+                <ul class="space-y-2 text-stone-400">
+                    <li><a href="#studio" onclick="window.patchStudio.selectGarment('denim')" class="hover:text-amber-400">Áo Khoác Denim Vintage</a></li>
+                    <li><a href="#studio" onclick="window.patchStudio.selectGarment('tee')" class="hover:text-amber-400">Áo Thun Cotton Cổ Điển</a></li>
+                    <li><a href="#studio" onclick="window.patchStudio.selectGarment('hoodie')" class="hover:text-amber-400">Áo Hoodie Nỉ Bông</a></li>
+                    <li><a href="#studio" onclick="window.patchStudio.selectGarment('jeans')" class="hover:text-amber-400">Quần Jean Denim</a></li>
+                    <li><a href="#studio" onclick="window.patchStudio.selectGarment('tote')" class="hover:text-amber-400">Túi Canvas Tote</a></li>
                 </ul>
             </div>
 
             <div>
-                <h4 class="text-sm font-bold text-white mb-3 uppercase tracking-wider">Hỗ Trợ & Chính Sách</h4>
-                <ul class="space-y-2">
-                    <li><a href="#iron-guide" class="hover:text-amber-400">Hướng dẫn ủi nhiệt tại nhà</a></li>
+                <h4 class="text-xs font-bold text-white mb-3 uppercase tracking-wider font-vintage">Hỗ Trợ & Chính Sách</h4>
+                <ul class="space-y-2 text-stone-400">
+                    <li><a href="#iron-guide" class="hover:text-amber-400">Cách ủi nhiệt dính 100% tại nhà</a></li>
                     <li><a href="#faqs" class="hover:text-amber-400">Chính sách bảo hành keo dán</a></li>
                     <li><a href="#custom-calculator" class="hover:text-amber-400">Báo giá thêu sỉ số lượng lớn</a></li>
                     <li><a href="#" class="hover:text-amber-400">Đổi trả 1-1 trong 7 ngày</a></li>
@@ -843,67 +811,75 @@
             </div>
 
             <div>
-                <h4 class="text-sm font-bold text-white mb-3 uppercase tracking-wider">Thông Tin Liên Hệ</h4>
-                <ul class="space-y-2">
-                    <li><i class="fa-solid fa-location-dot text-amber-400 mr-2"></i> 128/14 Đường D2, P. 25, Bình Thạnh, TP.HCM</li>
-                    <li><i class="fa-solid fa-phone text-amber-400 mr-2"></i> 0988.776.655 (Zalo/Hotline)</li>
-                    <li><i class="fa-solid fa-envelope text-amber-400 mr-2"></i> info@theucraft.vn</li>
-                    <li><i class="fa-solid fa-clock text-amber-400 mr-2"></i> 08:30 - 21:00 (Tất cả các ngày)</li>
+                <h4 class="text-xs font-bold text-white mb-3 uppercase tracking-wider font-vintage">Thông Tin Cửa Hàng VALEE</h4>
+                <ul class="space-y-2.5 text-stone-300">
+                    <li class="flex items-start gap-2">
+                        <i class="fa-solid fa-location-dot text-amber-500 mt-0.5"></i>
+                        <span>Gò Cát, P.Long Trường, TP. Thủ Đức, TP.HCM</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-amber-500"></i>
+                        <a href="tel:0977891360" class="hover:underline font-bold text-amber-400">0977.891.360 (Zalo/Hotline)</a>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-amber-500"></i>
+                        <span>contact@valee.vn</span>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-clock text-amber-500"></i>
+                        <span>08:30 - 21:00 (Mở cửa cả tuần)</span>
+                    </li>
                 </ul>
             </div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 border-t border-slate-800/80 pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500">
-            <p>© 2026 THÊUCRAFT Studio. All rights reserved.</p>
-            <p>Thiết kế dành riêng cho bạn - Ready for deployment.</p>
+        <div class="max-w-7xl mx-auto px-4 border-t border-stone-800 pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-stone-500">
+            <p>© 2026 VALEE - Vintage & Embroidery Clothing. All rights reserved.</p>
+            <p>Địa chỉ: Gò Cát, P.Long Trường, HCM • SĐT: 0977891360</p>
         </div>
     </footer>
 
     <!-- CART SLIDE-OVER DRAWER -->
-    <div id="cart-backdrop" onclick="window.cartStore.closeDrawer()" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 hidden transition-opacity"></div>
-    <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-slate-900 border-l border-slate-800 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col">
+    <div id="cart-backdrop" onclick="window.cartStore.closeDrawer()" class="fixed inset-0 bg-black/75 backdrop-blur-sm z-50 hidden transition-opacity"></div>
+    <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-stone-900 border-l border-stone-800 shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col">
         <!-- Drawer Header -->
-        <div class="p-4 border-b border-slate-800 flex items-center justify-between bg-slate-950/70">
+        <div class="p-4 border-b border-stone-800 flex items-center justify-between bg-stone-950">
             <div class="flex items-center gap-2">
                 <i class="fa-solid fa-bag-shopping text-amber-400 text-lg"></i>
-                <h3 class="font-bold text-white text-base">Giỏ Hàng Của Bạn</h3>
+                <h3 class="font-bold text-white text-base font-vintage">Giỏ Hàng Valee</h3>
             </div>
-            <button onclick="window.cartStore.closeDrawer()" class="text-slate-400 hover:text-white p-1">
+            <button onclick="window.cartStore.closeDrawer()" class="text-stone-400 hover:text-white p-1">
                 <i class="fa-solid fa-xmark text-lg"></i>
             </button>
         </div>
 
         <!-- Freeship Progress Bar in Drawer -->
-        <div class="px-4 py-3 bg-slate-950/40 border-b border-slate-800/80">
-            <div id="cart-freeship-text" class="text-xs text-slate-300 mb-1.5">
+        <div class="px-4 py-3 bg-stone-950/60 border-b border-stone-800">
+            <div id="cart-freeship-text" class="text-xs text-stone-300 mb-1.5">
                 Mua thêm <span class="text-amber-400 font-bold">299.000đ</span> để được FREESHIP
             </div>
-            <div class="w-full bg-slate-800 rounded-full h-2 overflow-hidden">
+            <div class="w-full bg-stone-800 rounded-full h-2 overflow-hidden">
                 <div id="cart-freeship-bar" class="bg-amber-500 h-2 rounded-full transition-all duration-300" style="width: 0%"></div>
             </div>
         </div>
 
         <!-- Drawer Body Items -->
-        <div id="cart-items-container" class="flex-1 overflow-y-auto p-4 space-y-3">
-            <!-- Dynamic cart items -->
-        </div>
+        <div id="cart-items-container" class="flex-1 overflow-y-auto p-4 space-y-3"></div>
 
         <!-- Drawer Footer & Coupon -->
-        <div class="p-4 border-t border-slate-800 bg-slate-950/80 space-y-3">
-            <!-- Coupon Input -->
+        <div class="p-4 border-t border-stone-800 bg-stone-950 space-y-3">
             <div class="flex gap-2">
-                <input type="text" id="cart-coupon-input" placeholder="Nhập mã PATCHVIBE hoặc FREESHIP" class="flex-1 bg-slate-900 border border-slate-700 rounded-xl px-3 py-2 text-xs text-slate-100 uppercase focus:outline-none focus:border-amber-400">
-                <button onclick="window.cartStore.applyCoupon(document.getElementById('cart-coupon-input').value)" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-amber-400 font-bold text-xs rounded-xl border border-slate-700">
+                <input type="text" id="cart-coupon-input" placeholder="Nhập mã PATCHVIBE hoặc FREESHIP" class="flex-1 bg-stone-900 border border-stone-750 rounded-xl px-3 py-2 text-xs text-stone-100 uppercase focus:outline-none focus:border-amber-400">
+                <button onclick="window.cartStore.applyCoupon(document.getElementById('cart-coupon-input').value)" class="px-4 py-2 bg-stone-850 hover:bg-stone-800 text-amber-400 font-bold text-xs rounded-xl border border-stone-750">
                     Áp dụng
                 </button>
             </div>
             <div id="cart-coupon-badge-wrapper"></div>
 
-            <!-- Cost Breakdown -->
-            <div class="space-y-1.5 text-xs text-slate-400 pt-1">
+            <div class="space-y-1.5 text-xs text-stone-400 pt-1">
                 <div class="flex justify-between">
                     <span>Tạm tính:</span>
-                    <span id="cart-subtotal" class="text-slate-200 font-semibold">0đ</span>
+                    <span id="cart-subtotal" class="text-stone-200 font-semibold">0đ</span>
                 </div>
                 <div id="cart-discount-row" class="flex justify-between text-emerald-400 hidden">
                     <span>Mã giảm giá:</span>
@@ -911,15 +887,15 @@
                 </div>
                 <div class="flex justify-between">
                     <span>Phí vận chuyển:</span>
-                    <span id="cart-shipping-value" class="text-slate-200">30.000đ</span>
+                    <span id="cart-shipping-value" class="text-stone-200">30.000đ</span>
                 </div>
-                <div class="flex justify-between items-baseline pt-2 border-t border-slate-800 text-sm">
-                    <span class="font-bold text-white">Tổng cộng:</span>
-                    <span id="cart-total" class="text-xl font-black text-amber-400 font-heading">0đ</span>
+                <div class="flex justify-between items-baseline pt-2 border-t border-stone-800 text-sm">
+                    <span class="font-bold text-white font-vintage">Tổng cộng:</span>
+                    <span id="cart-total" class="text-xl font-black text-amber-400 font-vintage">0đ</span>
                 </div>
             </div>
 
-            <button id="cart-checkout-btn" onclick="window.cartStore.openCheckoutModal()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-400 hover:from-amber-400 hover:to-yellow-300 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg shadow-amber-500/20 transition-all flex items-center justify-center gap-2">
+            <button id="cart-checkout-btn" onclick="window.cartStore.openCheckoutModal()" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-400 text-stone-950 font-black text-xs uppercase tracking-wider shadow-lg shadow-amber-600/20 transition-all flex items-center justify-center gap-2">
                 <i class="fa-solid fa-credit-card"></i> Tiến Hành Đặt Hàng
             </button>
         </div>
@@ -927,51 +903,47 @@
 
     <!-- QUICK VIEW MODAL -->
     <div id="quick-view-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-        <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl relative max-h-[90vh] flex flex-col md:flex-row">
-            <button onclick="closeQuickView()" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-slate-950/80 text-slate-300 hover:text-white flex items-center justify-center">
+        <div class="vintage-card rounded-3xl max-w-3xl w-full overflow-hidden shadow-2xl relative max-h-[90vh] flex flex-col md:flex-row">
+            <button onclick="closeQuickView()" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-stone-950/80 text-stone-300 hover:text-white flex items-center justify-center">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
-            <!-- Image Side -->
-            <div class="md:w-1/2 bg-slate-950 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-slate-800">
-                <img id="qv-image" src="" class="w-64 h-64 object-cover rounded-2xl shadow-2xl border border-slate-800">
+            <div class="md:w-1/2 bg-stone-950 p-6 flex items-center justify-center border-b md:border-b-0 md:border-r border-stone-800">
+                <img id="qv-image" src="" class="w-64 h-64 object-cover rounded-2xl shadow-2xl border border-stone-800">
             </div>
 
-            <!-- Details Side -->
             <div class="md:w-1/2 p-6 overflow-y-auto space-y-4">
                 <div>
-                    <span id="qv-badge" class="bg-red-600 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-block mb-2">Bán chạy</span>
-                    <h3 id="qv-title" class="text-lg font-black text-white font-heading">Tên sản phẩm</h3>
+                    <span id="qv-badge" class="bg-amber-700 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider inline-block mb-2">Mẫu Vintage</span>
+                    <h3 id="qv-title" class="text-lg font-black text-white font-vintage">Tên sản phẩm</h3>
                     <div id="qv-rating" class="text-xs text-amber-400 mt-1">5.0 (120 đánh giá)</div>
                 </div>
 
                 <div class="flex items-baseline gap-3">
-                    <span id="qv-price" class="text-2xl font-black text-amber-400 font-heading">75.000đ</span>
-                    <span id="qv-original-price" class="text-xs text-slate-500 line-through">99.000đ</span>
+                    <span id="qv-price" class="text-2xl font-black text-amber-400 font-vintage">75.000đ</span>
+                    <span id="qv-original-price" class="text-xs text-stone-500 line-through">99.000đ</span>
                 </div>
 
-                <div class="space-y-1.5 text-xs text-slate-300 bg-slate-950/60 p-3 rounded-xl border border-slate-800">
+                <div class="space-y-1.5 text-xs text-stone-300 bg-stone-950 p-3 rounded-xl border border-stone-800">
                     <div><b>Kích thước:</b> <span id="qv-size">8.5 x 8.5 cm</span></div>
                     <div><b>Mật độ thêu:</b> <span id="qv-density">24.500 mũi</span></div>
                     <div><b>Loại sợi:</b> <span id="qv-thread">Chỉ tơ lụa</span></div>
                     <div><b>Viền:</b> <span id="qv-edge">Merrowed đệm nổi</span></div>
                 </div>
 
-                <p id="qv-desc" class="text-xs text-slate-400 leading-relaxed"></p>
+                <p id="qv-desc" class="text-xs text-stone-400 leading-relaxed"></p>
 
-                <!-- Backing options selector -->
                 <div>
-                    <label class="block text-xs font-bold text-slate-200 mb-2">Chọn kiểu mặt sau:</label>
+                    <label class="block text-xs font-bold text-stone-200 mb-2">Chọn kiểu mặt sau:</label>
                     <div id="qv-backing-options" class="space-y-2"></div>
                 </div>
 
-                <!-- Quantity & Buttons -->
                 <div class="pt-2 flex items-center gap-3">
-                    <input type="number" id="qv-quantity" value="1" min="1" max="100" class="w-16 bg-slate-950 border border-slate-700 rounded-xl px-2 py-2.5 text-xs text-center font-bold text-white">
-                    <button onclick="addQuickViewToCart()" class="flex-1 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs uppercase tracking-wider transition-all">
+                    <input type="number" id="qv-quantity" value="1" min="1" max="100" class="w-16 bg-stone-950 border border-stone-750 rounded-xl px-2 py-2.5 text-xs text-center font-bold text-white">
+                    <button onclick="addQuickViewToCart()" class="flex-1 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-black text-xs uppercase tracking-wider transition-all">
                         <i class="fa-solid fa-bag-shopping mr-1.5"></i> Thêm Giỏ Hàng
                     </button>
-                    <button onclick="tryQuickViewInStudio()" class="p-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-300 border border-slate-700 text-xs" title="Thử lên áo trong Studio">
+                    <button onclick="tryQuickViewInStudio()" class="p-2.5 rounded-xl bg-stone-800 hover:bg-stone-750 text-amber-300 border border-stone-750 text-xs" title="Thử lên đồ trong Studio">
                         <i class="fa-solid fa-shirt"></i>
                     </button>
                 </div>
@@ -979,76 +951,76 @@
         </div>
     </div>
 
-    <!-- CHECKOUT MODAL WITH DYNAMIC VIETQR -->
+    <!-- CHECKOUT MODAL WITH VALEE STORE INFO & VIETQR -->
     <div id="checkout-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-        <div class="bg-slate-900 border border-slate-700 rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl relative max-h-[95vh] flex flex-col">
-            <div class="p-5 border-b border-slate-800 flex justify-between items-center bg-slate-950">
-                <h3 class="font-black text-white text-base flex items-center gap-2">
-                    <i class="fa-solid fa-shield-halved text-amber-400"></i> Xác Nhận Đơn Hàng & Thanh Toán
+        <div class="vintage-card rounded-3xl max-w-2xl w-full overflow-hidden shadow-2xl relative max-h-[95vh] flex flex-col">
+            <div class="p-5 border-b border-stone-800 flex justify-between items-center bg-stone-950">
+                <h3 class="font-black text-white text-base flex items-center gap-2 font-vintage">
+                    <i class="fa-solid fa-shield-halved text-amber-400"></i> Đặt Hàng Tại Valee (Hotline: 0977891360)
                 </h3>
-                <button onclick="window.cartStore.closeCheckoutModal()" class="text-slate-400 hover:text-white">
+                <button onclick="window.cartStore.closeCheckoutModal()" class="text-stone-400 hover:text-white">
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
 
             <form onsubmit="window.cartStore.processOrder(event)" class="p-6 overflow-y-auto space-y-6">
                 <!-- Order Review List -->
-                <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800">
-                    <h4 class="text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Các món trong đơn:</h4>
+                <div class="bg-stone-950 p-4 rounded-2xl border border-stone-800">
+                    <h4 class="text-xs font-bold text-stone-300 uppercase tracking-wider mb-2 font-vintage">Các mẫu trong đơn:</h4>
                     <div id="checkout-order-items" class="space-y-1"></div>
-                    <div class="mt-3 pt-2 border-t border-slate-800 flex justify-between items-center text-xs">
-                        <span class="text-slate-400">Mã đơn hàng: <b id="checkout-order-code-display" class="text-white">PT123456</b></span>
-                        <span class="text-slate-400">Phí ship: <b id="checkout-shipping-amount" class="text-emerald-400">Miễn phí</b></span>
+                    <div class="mt-3 pt-2 border-t border-stone-800 flex justify-between items-center text-xs">
+                        <span class="text-stone-400">Mã đơn: <b id="checkout-order-code-display" class="text-white">VALEE123456</b></span>
+                        <span class="text-stone-400">Phí ship: <b id="checkout-shipping-amount" class="text-emerald-400">Miễn phí</b></span>
                     </div>
                 </div>
 
                 <!-- Recipient Info -->
                 <div class="space-y-3">
-                    <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider">Thông tin người nhận hàng:</h4>
+                    <h4 class="text-xs font-bold text-stone-200 uppercase tracking-wider font-vintage">Thông tin người nhận:</h4>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <input type="text" id="order-fullname" placeholder="Họ và tên *" required class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400">
-                        <input type="tel" id="order-phone" placeholder="Số điện thoại *" required class="bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400">
+                        <input type="text" id="order-fullname" placeholder="Họ và tên *" required class="bg-stone-950 border border-stone-750 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400">
+                        <input type="tel" id="order-phone" placeholder="Số điện thoại *" required class="bg-stone-950 border border-stone-750 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400">
                     </div>
-                    <input type="text" id="order-address" placeholder="Địa chỉ giao hàng chi tiết (Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành) *" required class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400">
+                    <input type="text" id="order-address" placeholder="Địa chỉ giao hàng (Số nhà, đường, phường/xã, quận/huyện, tỉnh/thành) *" required class="w-full bg-stone-950 border border-stone-750 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400">
                 </div>
 
                 <!-- Payment Methods -->
                 <div>
-                    <h4 class="text-xs font-bold text-slate-200 uppercase tracking-wider mb-3">Phương thức thanh toán:</h4>
+                    <h4 class="text-xs font-bold text-stone-200 uppercase tracking-wider mb-3 font-vintage">Phương thức thanh toán:</h4>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-700 bg-slate-950 cursor-pointer">
+                        <label class="flex items-center gap-3 p-3 rounded-xl border border-stone-750 bg-stone-950 cursor-pointer">
                             <input type="radio" name="paymentMethod" value="cod" checked onchange="document.getElementById('qr-payment-box').classList.add('hidden')" class="text-amber-500">
                             <div>
                                 <span class="text-xs font-bold text-white block">Thanh toán khi nhận hàng (COD)</span>
-                                <span class="text-[10px] text-slate-400">Kiểm tra hàng trước khi thanh toán</span>
+                                <span class="text-[10px] text-stone-400">Kiểm tra hàng trước khi nhận</span>
                             </div>
                         </label>
-                        <label class="flex items-center gap-3 p-3 rounded-xl border border-slate-700 bg-slate-950 cursor-pointer">
+                        <label class="flex items-center gap-3 p-3 rounded-xl border border-stone-750 bg-stone-950 cursor-pointer">
                             <input type="radio" name="paymentMethod" value="bank" onchange="document.getElementById('qr-payment-box').classList.remove('hidden')" class="text-amber-500">
                             <div>
-                                <span class="text-xs font-bold text-white block">Chuyển khoản QR (SePay/VietQR)</span>
+                                <span class="text-xs font-bold text-white block">Chuyển khoản QR SePay / VietQR</span>
                                 <span class="text-[10px] text-emerald-400">Quét mã QR tự động xác nhận</span>
                             </div>
                         </label>
                     </div>
 
                     <!-- Dynamic VietQR box -->
-                    <div id="qr-payment-box" class="hidden mt-4 p-4 rounded-2xl bg-slate-950 border border-amber-500/40 text-center space-y-3">
+                    <div id="qr-payment-box" class="hidden mt-4 p-4 rounded-2xl bg-stone-950 border border-amber-500/40 text-center space-y-3">
                         <span class="text-xs font-bold text-amber-400">Mã QR Thanh Toán Tự Động Chính Xác Số Tiền:</span>
                         <div class="flex justify-center">
-                            <img id="vietqr-image" src="" alt="VietQR" class="w-48 h-auto rounded-xl border border-slate-700 shadow-xl bg-white p-2">
+                            <img id="vietqr-image" src="" alt="VietQR Valee" class="w-48 h-auto rounded-xl border border-stone-700 shadow-xl bg-white p-2">
                         </div>
-                        <p class="text-[11px] text-slate-400">Mở app Ngân hàng (MB, VCB, Techcombank, TPBank, MoMo) quét mã để thanh toán tức thì.</p>
+                        <p class="text-[11px] text-stone-400">Mở app Ngân hàng quét mã để thanh toán đơn hàng cho Valee.</p>
                     </div>
                 </div>
 
                 <!-- Total & Submit -->
-                <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+                <div class="pt-4 border-t border-stone-800 flex items-center justify-between">
                     <div>
-                        <span class="text-xs text-slate-400 block">Số tiền thanh toán:</span>
-                        <span id="checkout-final-amount" class="text-2xl font-black text-amber-400 font-heading">0đ</span>
+                        <span class="text-xs text-stone-400 block">Số tiền thanh toán:</span>
+                        <span id="checkout-final-amount" class="text-2xl font-black text-amber-400 font-vintage">0đ</span>
                     </div>
-                    <button type="submit" class="px-8 py-3.5 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs uppercase tracking-wider shadow-lg shadow-amber-500/25">
+                    <button type="submit" class="px-8 py-3.5 rounded-xl bg-gradient-to-r from-amber-600 via-amber-500 to-amber-600 hover:from-amber-500 hover:to-amber-400 text-stone-950 font-black text-xs uppercase tracking-wider shadow-lg shadow-amber-600/25">
                         <i class="fa-solid fa-check"></i> Xác Nhận Đặt Hàng
                     </button>
                 </div>
@@ -1058,33 +1030,33 @@
 
     <!-- ORDER SUCCESS CONFIRMATION MODAL -->
     <div id="order-success-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-        <div class="bg-slate-900 border border-emerald-500/50 rounded-3xl max-w-md w-full p-6 text-center space-y-4 shadow-2xl">
+        <div class="vintage-card border border-emerald-500/50 rounded-3xl max-w-md w-full p-6 text-center space-y-4 shadow-2xl">
             <div class="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 flex items-center justify-center mx-auto text-3xl">
                 <i class="fa-solid fa-check"></i>
             </div>
-            <h3 class="text-xl font-black text-white font-heading">ĐẶT HÀNG THÀNH CÔNG!</h3>
-            <p class="text-xs text-slate-300">
-                Cảm ơn bạn đã lựa chọn THÊUCRAFT! Đơn hàng của bạn đã được ghi nhận và đang được xưởng chuẩn bị đóng gói.
+            <h3 class="text-xl font-black text-white font-vintage">ĐẶT HÀNG THÀNH CÔNG!</h3>
+            <p class="text-xs text-stone-300">
+                Cảm ơn bạn đã lựa chọn VALEE! Xưởng tại Gò Cát, P.Long Trường, HCM đang chuẩn bị đơn hàng của bạn.
             </p>
 
-            <div class="bg-slate-950 p-4 rounded-2xl border border-slate-800 text-xs text-left space-y-2">
-                <div class="flex justify-between"><span class="text-slate-400">Mã đơn hàng:</span> <b id="success-order-code" class="text-amber-400">PT123456</b></div>
-                <div class="flex justify-between"><span class="text-slate-400">Người nhận:</span> <b id="success-recipient" class="text-slate-200">Nguyễn Văn A</b></div>
-                <div class="flex justify-between"><span class="text-slate-400">Địa chỉ:</span> <span id="success-address" class="text-slate-300 truncate max-w-[200px]">TP.HCM</span></div>
-                <div class="flex justify-between"><span class="text-slate-400">Phương thức:</span> <span id="success-payment" class="text-slate-300">COD</span></div>
-                <div class="flex justify-between pt-2 border-t border-slate-800"><span class="text-slate-400">Tổng thanh toán:</span> <b id="success-total" class="text-amber-400 font-bold">150.000đ</b></div>
+            <div class="bg-stone-950 p-4 rounded-2xl border border-stone-800 text-xs text-left space-y-2">
+                <div class="flex justify-between"><span class="text-stone-400">Mã đơn hàng:</span> <b id="success-order-code" class="text-amber-400">VALEE123456</b></div>
+                <div class="flex justify-between"><span class="text-stone-400">Người nhận:</span> <b id="success-recipient" class="text-stone-200">Nguyễn Văn A</b></div>
+                <div class="flex justify-between"><span class="text-stone-400">Địa chỉ:</span> <span id="success-address" class="text-stone-300 truncate max-w-[200px]">TP.HCM</span></div>
+                <div class="flex justify-between"><span class="text-stone-400">Phương thức:</span> <span id="success-payment" class="text-stone-300">COD</span></div>
+                <div class="flex justify-between pt-2 border-t border-stone-800"><span class="text-stone-400">Tổng thanh toán:</span> <b id="success-total" class="text-amber-400 font-bold">150.000đ</b></div>
             </div>
 
-            <button onclick="window.cartStore.closeSuccessModal()" class="w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold text-xs uppercase tracking-wider">
-                Tiếp Tục Mua Sắm
+            <button onclick="window.cartStore.closeSuccessModal()" class="w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-xs uppercase tracking-wider">
+                Tiếp Tục Xem Thêm Mẫu Thêu
             </button>
         </div>
     </div>
 
     <!-- CUSTOM ORDER QUOTE RESULT MODAL -->
     <div id="custom-order-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
-        <div class="bg-slate-900 border border-amber-500/50 rounded-3xl max-w-lg w-full p-6 space-y-4 shadow-2xl relative">
-            <button onclick="window.patchCalc.closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+        <div class="vintage-card brass-frame rounded-3xl max-w-lg w-full p-6 space-y-4 shadow-2xl relative">
+            <button onclick="window.patchCalc.closeModal()" class="absolute top-4 right-4 text-stone-400 hover:text-white">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="flex items-center gap-3">
@@ -1092,18 +1064,18 @@
                     <i class="fa-solid fa-file-invoice"></i>
                 </div>
                 <div>
-                    <h3 class="text-base font-black text-white font-heading">PHIẾU BÁO GIÁ ĐẶT THÊU</h3>
-                    <p class="text-[11px] text-slate-400">Lưu thông tin và kết nối Zalo với xưởng thêu</p>
+                    <h3 class="text-base font-black text-white font-vintage">PHIẾU BÁO GIÁ ĐẶT THÊU VALEE</h3>
+                    <p class="text-[11px] text-stone-400">Địa chỉ: Gò Cát, P.Long Trường, HCM • SĐT: 0977891360</p>
                 </div>
             </div>
 
-            <pre id="custom-order-modal-summary" class="bg-slate-950 p-4 rounded-2xl border border-slate-800 text-xs text-amber-200 font-mono whitespace-pre-wrap leading-relaxed"></pre>
+            <pre id="custom-order-modal-summary" class="bg-stone-950 p-4 rounded-2xl border border-stone-800 text-xs text-amber-200 font-mono whitespace-pre-wrap leading-relaxed"></pre>
 
             <div class="space-y-2">
-                <a href="https://zalo.me" target="_blank" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all">
-                    <i class="fa-solid fa-comment-dots"></i> Gửi Yêu Cầu Nhanh Qua Zalo (0988.776.655)
+                <a href="https://zalo.me/0977891360" target="_blank" class="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all">
+                    <i class="fa-solid fa-comment-dots"></i> Gửi Nhanh Qua Zalo (0977.891.360)
                 </a>
-                <button onclick="navigator.clipboard.writeText(document.getElementById('custom-order-modal-summary').innerText); showToast('Đã copy thông tin báo giá!', 'success');" class="w-full py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold text-xs border border-slate-700">
+                <button onclick="navigator.clipboard.writeText(document.getElementById('custom-order-modal-summary').innerText); showToast('Đã copy thông tin báo giá!', 'success');" class="w-full py-2.5 rounded-xl bg-stone-800 hover:bg-stone-750 text-stone-300 font-semibold text-xs border border-stone-700">
                     <i class="fa-solid fa-copy mr-1"></i> Sao chép thông tin báo giá
                 </button>
             </div>

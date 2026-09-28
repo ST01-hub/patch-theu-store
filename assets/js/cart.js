@@ -319,13 +319,13 @@ class CartStore {
         document.getElementById('checkout-shipping-amount').textContent = this.getShipping() === 0 ? 'Miễn phí' : formatCurrency(this.getShipping());
 
         // Update QR code for bank transfer
-        const orderCode = 'PT' + Math.floor(100000 + Math.random() * 900000);
+        const orderCode = 'VALEE' + Math.floor(100000 + Math.random() * 900000);
         document.getElementById('checkout-order-code-display').textContent = orderCode;
         
         const qrImg = document.getElementById('vietqr-image');
         if (qrImg) {
-            // VietQR public generator API
-            qrImg.src = `https://img.vietqr.io/image/MB-0988776655-compact2.png?amount=${total}&addInfo=${orderCode}&accountName=PATCH%20THEU%20STORE`;
+            // VietQR public generator API with Valee phone and store name
+            qrImg.src = `https://img.vietqr.io/image/MB-0977891360-compact2.png?amount=${total}&addInfo=${orderCode}&accountName=VALEE%20EMBROIDERY`;
         }
 
         modal.classList.remove('hidden');
