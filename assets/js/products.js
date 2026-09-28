@@ -207,3 +207,59 @@ const PRODUCTS = [
 function formatCurrency(amount) {
     return new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
 }
+
+// Global Toast notification helper (available to all modules)
+function showToast(message, type = 'info') {
+    const container = document.getElementById('toast-container');
+    if (!container) {
+        console.log(`[Toast] ${message}`);
+        return;
+    }
+
+    const toast = document.createElement('div');
+    const bgColors = {
+        success: 'bg-emerald-950/95 border-emerald-500 text-emerald-200',
+        error: 'bg-rose-950/95 border-rose-500 text-rose-200',
+        info: 'bg-stone-900/95 border-amber-500/70 text-stone-100'
+    };
+    const icons = {
+        success: 'fa-circle-check text-emerald-400',
+        error: 'fa-circle-exclamation text-rose-400',
+        info: 'fa-bell text-amber-400'
+    };
+
+    toast.className = `flex items-center gap-3 px-4 py-3 rounded-xl border shadow-2xl backdrop-blur-md transition-all duration-300 transform translate-y-3 opacity-0 text-sm ${bgColors[type] || bgColors.info}`;
+    toast.innerHTML = `
+        <i class="fa-solid ${icons[type] || icons.info} text-base"></i>
+        <span class="font-medium">${message}</span>
+    `;
+
+    container.appendChild(toast);
+
+    if (typeof requestAnimationFrame === 'function') {
+        requestAnimationFrame(() => {
+            toast.classList.remove('translate-y-3', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+        });
+    } else {
+        setTimeout(() => {
+            toast.classList.remove('translate-y-3', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+        }, 20);
+    }
+
+    setTimeout(() => {
+        toast.classList.add('opacity-0', 'translate-y-2');
+        setTimeout(() => toast.remove(), 300);
+    }, 3200);
+}
+
+// Window global exports
+if (typeof window !== 'undefined') {
+    window.CATEGORIES = CATEGORIES;
+    window.BACKING_TYPES = BACKING_TYPES;
+    window.PRODUCTS = PRODUCTS;
+    window.formatCurrency = formatCurrency;
+    window.showToast = showToast;
+}
+

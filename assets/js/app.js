@@ -14,42 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initFAQ();
 });
 
-// Toast notification helper
-function showToast(message, type = 'info') {
-    const container = document.getElementById('toast-container');
-    if (!container) return;
-
-    const toast = document.createElement('div');
-    const bgColors = {
-        success: 'bg-emerald-950/90 border-emerald-500 text-emerald-200',
-        error: 'bg-rose-950/90 border-rose-500 text-rose-200',
-        info: 'bg-slate-900/90 border-amber-500/70 text-slate-100'
+// Toast notification helper uses global showToast from products.js
+// If not defined, fallback safely
+if (typeof showToast !== 'function') {
+    window.showToast = function(message, type = 'info') {
+        console.log(`[Toast] ${message}`);
     };
-    const icons = {
-        success: 'fa-circle-check text-emerald-400',
-        error: 'fa-circle-exclamation text-rose-400',
-        info: 'fa-bell text-amber-400'
-    };
-
-    toast.className = `flex items-center gap-3 px-4 py-3 rounded-xl border shadow-2xl backdrop-blur-md transition-all duration-300 transform translate-y-3 opacity-0 text-sm ${bgColors[type] || bgColors.info}`;
-    toast.innerHTML = `
-        <i class="fa-solid ${icons[type] || icons.info} text-base"></i>
-        <span class="font-medium">${message}</span>
-    `;
-
-    container.appendChild(toast);
-
-    // Animate in
-    requestAnimationFrame(() => {
-        toast.classList.remove('translate-y-3', 'opacity-0');
-        toast.classList.add('translate-y-0', 'opacity-100');
-    });
-
-    // Auto remove
-    setTimeout(() => {
-        toast.classList.add('opacity-0', 'translate-y-2');
-        setTimeout(() => toast.remove(), 300);
-    }, 3200);
 }
 
 // Category Tabs

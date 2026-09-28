@@ -273,27 +273,73 @@
                     </div>
                 </div>
 
-                <!-- 1. Garment Selector Bar (Áo Denim, Áo Thun, Hoodie, Quần Jean, Túi Tote) -->
-                <div class="mb-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 bg-stone-900/60 p-3 rounded-2xl border border-stone-800">
-                    <div class="flex items-center gap-2">
-                        <span class="text-xs font-bold uppercase tracking-wider text-stone-400 whitespace-nowrap">
-                            <i class="fa-solid fa-layer-group text-amber-500 mr-1"></i> Chọn dòng đồ:
-                        </span>
-                        <div id="studio-garment-tabs" class="flex flex-wrap gap-2">
-                            <!-- Populated dynamically by studio.js -->
+                <!-- 1. Garment Selector Bar & Front/Back Switcher -->
+                <div class="mb-6 p-4 rounded-2xl bg-stone-900/90 border border-stone-750 shadow-xl space-y-3">
+                    <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+                        
+                        <!-- Garment Category Buttons (Denim, Tee, Hoodie, Jeans, Tote) -->
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-2.5 w-full lg:w-auto">
+                            <span class="text-xs font-bold uppercase tracking-wider text-amber-400 whitespace-nowrap flex items-center gap-1.5 font-vintage">
+                                <i class="fa-solid fa-shirt text-amber-500"></i> Dòng Trang Phục:
+                            </span>
+                            <div id="studio-garment-tabs" class="flex flex-wrap gap-2">
+                                <button type="button" 
+                                        id="garment-tab-denim"
+                                        onclick="setStudioGarment('denim')"
+                                        class="garment-tab-btn px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all border bg-amber-500/25 border-amber-500 text-amber-300 shadow-md ring-1 ring-amber-500/50 cursor-pointer">
+                                    <i class="fa-solid fa-vest text-sm text-amber-400"></i>
+                                    <span>Áo Khoác Denim</span>
+                                </button>
+                                <button type="button" 
+                                        id="garment-tab-tee"
+                                        onclick="setStudioGarment('tee')"
+                                        class="garment-tab-btn px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all border bg-stone-900/80 border-stone-700/70 text-stone-300 hover:border-stone-500 hover:text-white cursor-pointer">
+                                    <i class="fa-solid fa-shirt text-sm text-stone-400"></i>
+                                    <span>Áo Thun Vintage</span>
+                                </button>
+                                <button type="button" 
+                                        id="garment-tab-hoodie"
+                                        onclick="setStudioGarment('hoodie')"
+                                        class="garment-tab-btn px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all border bg-stone-900/80 border-stone-700/70 text-stone-300 hover:border-stone-500 hover:text-white cursor-pointer">
+                                    <i class="fa-solid fa-vest-patches text-sm text-stone-400"></i>
+                                    <span>Áo Hoodie / Nỉ</span>
+                                </button>
+                                <button type="button" 
+                                        id="garment-tab-jeans"
+                                        onclick="setStudioGarment('jeans')"
+                                        class="garment-tab-btn px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all border bg-stone-900/80 border-stone-700/70 text-stone-300 hover:border-stone-500 hover:text-white cursor-pointer">
+                                    <i class="fa-solid fa-socks text-sm text-stone-400"></i>
+                                    <span>Quần Jean Denim</span>
+                                </button>
+                                <button type="button" 
+                                        id="garment-tab-tote"
+                                        onclick="setStudioGarment('tote')"
+                                        class="garment-tab-btn px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all border bg-stone-900/80 border-stone-700/70 text-stone-300 hover:border-stone-500 hover:text-white cursor-pointer">
+                                    <i class="fa-solid fa-bag-shopping text-sm text-stone-400"></i>
+                                    <span>Túi Canvas Tote</span>
+                                </button>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- 2. Front & Back Switcher Buttons (Mặt Trước & Mặt Sau) -->
-                    <div class="flex items-center gap-1.5 bg-stone-950 p-1 rounded-xl border border-stone-800">
-                        <button type="button" id="view-front-btn" onclick="window.patchStudio.setView('front')" 
-                                class="px-4 py-2 rounded-lg text-xs font-black bg-amber-500 text-stone-950 shadow-md transition-all flex items-center gap-1.5">
-                            <i class="fa-solid fa-eye"></i> Mặt Trước
-                        </button>
-                        <button type="button" id="view-back-btn" onclick="window.patchStudio.setView('back')" 
-                                class="px-4 py-2 rounded-lg text-xs font-medium bg-stone-900/80 text-stone-300 hover:text-white transition-all flex items-center gap-1.5">
-                            <i class="fa-solid fa-rotate"></i> Mặt Sau
-                        </button>
+                        <!-- 2. Front & Back Switcher Buttons (Mặt Trước & Mặt Sau) -->
+                        <div class="flex items-center gap-2 w-full sm:w-auto justify-end">
+                            <span class="text-xs font-bold uppercase tracking-wider text-stone-400 whitespace-nowrap hidden sm:inline-block font-vintage">
+                                Góc nhìn:
+                            </span>
+                            <div class="flex items-center gap-1.5 bg-stone-950 p-1.5 rounded-xl border border-stone-800 shadow-inner">
+                                <button type="button" id="view-front-btn" onclick="setStudioView('front')" 
+                                        class="px-5 py-2.5 rounded-lg text-xs font-black bg-amber-500 text-stone-950 shadow-md transition-all flex items-center gap-2 cursor-pointer">
+                                    <i class="fa-solid fa-eye text-stone-950"></i>
+                                    <span>Mặt Trước</span>
+                                </button>
+                                <button type="button" id="view-back-btn" onclick="setStudioView('back')" 
+                                        class="px-5 py-2.5 rounded-lg text-xs font-semibold bg-stone-900/90 text-stone-300 hover:text-white hover:bg-stone-850 transition-all flex items-center gap-2 cursor-pointer">
+                                    <i class="fa-solid fa-rotate text-amber-400"></i>
+                                    <span>Mặt Sau</span>
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 

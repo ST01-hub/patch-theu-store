@@ -67,36 +67,33 @@ class PatchStudio {
     }
 
     init() {
-        if (!this.canvasContainer) return;
         this.renderGarmentSelectors();
         this.renderStudioPatchSelector();
         this.setupEventListeners();
 
-        // Default sample patches on denim front & back for inspiration
+        // Sample patches on denim front & back for inspiration
         setTimeout(() => {
-            if (PRODUCTS.length > 0 && this.getCurrentPatches().length === 0) {
-                // Front: tiger patch on chest pocket
+            const productList = (typeof PRODUCTS !== 'undefined' && PRODUCTS.length) ? PRODUCTS : (window.PRODUCTS || []);
+            if (productList.length > 0 && this.getCurrentPatches().length === 0) {
                 this.garmentPatches['denim'].front.push({
                     id: 'init-1',
-                    product: PRODUCTS[0],
+                    product: productList[0],
                     x: 28,
                     y: 36,
                     size: 95,
                     rotation: 0
                 });
-                // Front: ramen cat patch on lower side
                 this.garmentPatches['denim'].front.push({
                     id: 'init-2',
-                    product: PRODUCTS[2],
+                    product: productList[2] || productList[0],
                     x: 65,
                     y: 45,
                     size: 90,
                     rotation: 0
                 });
-                // Back: large Kanagawa wave or astronaut on back
                 this.garmentPatches['denim'].back.push({
                     id: 'init-3',
-                    product: PRODUCTS[4] || PRODUCTS[0],
+                    product: productList[4] || productList[0],
                     x: 50,
                     y: 42,
                     size: 140,
@@ -105,10 +102,13 @@ class PatchStudio {
 
                 this.renderGarmentView();
             }
-        }, 200);
+        }, 150);
     }
 
     getCurrentPatches() {
+        if (!this.garmentPatches[this.currentGarmentId]) {
+            this.garmentPatches[this.currentGarmentId] = { front: [], back: [] };
+        }
         return this.garmentPatches[this.currentGarmentId][this.currentView];
     }
 
@@ -116,14 +116,18 @@ class PatchStudio {
         const container = document.getElementById('studio-garment-tabs');
         if (!container) return;
 
-        container.innerHTML = Object.values(GARMENTS).map(g => `
-            <button type="button" 
-                    onclick="window.patchStudio.selectGarment('${g.id}')"
-                    class="garment-tab-btn px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all border ${g.id === this.currentGarmentId ? 'bg-amber-500/20 border-amber-500/80 text-amber-300 shadow-md' : 'bg-stone-900/80 border-stone-700/60 text-stone-300 hover:border-stone-500'}">
-                <i class="fa-solid ${g.icon} text-sm ${g.id === this.currentGarmentId ? 'text-amber-400' : 'text-stone-400'}"></i>
-                <span>${g.name}</span>
-            </button>
-        `).join('');
+        container.innerHTML = Object.values(GARMENTS).map(g => {
+            const isActive = g.id === this.currentGarmentId;
+            return `
+                <button type="button" 
+                        id="garment-tab-${g.id}"
+                        onclick="setStudioGarment('${g.id}')"
+                        class="garment-tab-btn px-4 py-2 rounded-xl text-xs font-semibold flex items-center gap-2 transition-all border ${isActive ? 'bg-amber-500/25 border-amber-500 text-amber-300 shadow-md ring-1 ring-amber-500/50' : 'bg-stone-900/80 border-stone-700/70 text-stone-300 hover:border-stone-500 hover:text-white'}">
+                    <i class="fa-solid ${g.icon} text-sm ${isActive ? 'text-amber-400' : 'text-stone-400'}"></i>
+                    <span>${g.name}</span>
+                </button>
+            `;
+        }).join('');
     }
 
     selectGarment(garmentId) {
@@ -136,26 +140,22 @@ class PatchStudio {
     }
 
     setView(view) {
-        if (this.currentView === view) return;
+        if (view !== 'front' && view !== 'back') return;
         this.currentView = view;
         this.activePatchIndex = null;
 
         // Update front/back toggle buttons styling
         const frontBtn = document.getElementById('view-front-btn');
         const backBtn = document.getElementById('view-back-btn');
-        const activeClass = ['bg-amber-500', 'text-stone-950', 'font-black', 'shadow-md'];
-        const inactiveClass = ['bg-stone-900/80', 'text-stone-300', 'font-medium'];
 
-        if (view === 'front') {
-            frontBtn?.classList.add(...activeClass);
-            frontBtn?.classList.remove(...inactiveClass);
-            backBtn?.classList.remove(...activeClass);
-            backBtn?.classList.add(...inactiveClass);
-        } else {
-            backBtn?.classList.add(...activeClass);
-            backBtn?.classList.remove(...inactiveClass);
-            frontBtn?.classList.remove(...activeClass);
-            frontBtn?.classList.add(...inactiveClass);
+        if (frontBtn && backBtn) {
+            if (view === 'front') {
+                frontBtn.className = "px-5 py-2.5 rounded-lg text-xs font-black bg-amber-500 text-stone-950 shadow-md transition-all flex items-center gap-1.5 cursor-pointer";
+                backBtn.className = "px-5 py-2.5 rounded-lg text-xs font-semibold bg-stone-900/90 text-stone-300 hover:text-white hover:bg-stone-850 transition-all flex items-center gap-1.5 cursor-pointer";
+            } else {
+                backBtn.className = "px-5 py-2.5 rounded-lg text-xs font-black bg-amber-500 text-stone-950 shadow-md transition-all flex items-center gap-1.5 cursor-pointer";
+                frontBtn.className = "px-5 py-2.5 rounded-lg text-xs font-semibold bg-stone-900/90 text-stone-300 hover:text-white hover:bg-stone-850 transition-all flex items-center gap-1.5 cursor-pointer";
+            }
         }
 
         this.renderGarmentView();
@@ -164,15 +164,17 @@ class PatchStudio {
 
     renderGarmentView() {
         const garment = GARMENTS[this.currentGarmentId];
-        if (!garment || !this.garmentImg) return;
+        if (!garment) return;
 
-        // Smooth image switch with subtle fade
-        this.garmentImg.style.opacity = '0.4';
-        setTimeout(() => {
-            this.garmentImg.src = this.currentView === 'front' ? garment.frontImg : garment.backImg;
+        if (!this.garmentImg) {
+            this.garmentImg = document.getElementById('studio-garment-image');
+        }
+
+        if (this.garmentImg) {
+            const targetSrc = this.currentView === 'front' ? garment.frontImg : garment.backImg;
+            this.garmentImg.src = targetSrc;
             this.garmentImg.alt = `${garment.name} - ${this.currentView === 'front' ? 'Mặt Trước' : 'Mặt Sau'}`;
-            this.garmentImg.style.opacity = '1';
-        }, 120);
+        }
 
         // Update view badge label
         const badge = document.getElementById('studio-current-view-badge');
@@ -188,32 +190,36 @@ class PatchStudio {
         const tray = document.getElementById('studio-tray');
         if (!tray) return;
 
-        tray.innerHTML = PRODUCTS.slice(0, 6).map(prod => `
-            <div class="studio-tray-item group flex flex-col items-center p-2 rounded-xl bg-stone-900/80 hover:bg-stone-800 border border-stone-700/60 hover:border-amber-400 cursor-pointer transition-all shadow-md transform hover:-translate-y-1"
+        const productList = (typeof PRODUCTS !== 'undefined' && PRODUCTS.length) ? PRODUCTS : (window.PRODUCTS || []);
+        if (!productList.length) return;
+
+        tray.innerHTML = productList.slice(0, 6).map(prod => `
+            <div class="studio-tray-item group flex flex-col items-center p-2 rounded-xl bg-stone-900/90 hover:bg-stone-800 border border-stone-700/70 hover:border-amber-400 cursor-pointer transition-all shadow-md transform hover:-translate-y-1"
                  onclick="window.patchStudio.addPatchToGarmentById('${prod.id}')"
                  title="Bấm để gắn lên vị trí này">
-                <div class="relative w-14 h-14 rounded-full overflow-hidden border border-amber-400/30 group-hover:border-amber-400 bg-stone-950 flex items-center justify-center p-0.5 shadow-inner">
+                <div class="relative w-14 h-14 rounded-full overflow-hidden border border-amber-400/40 group-hover:border-amber-400 bg-stone-950 flex items-center justify-center p-0.5 shadow-inner">
                     <img src="${prod.image}" alt="${prod.name}" class="w-full h-full object-cover rounded-full">
                 </div>
                 <span class="text-[10px] font-medium text-stone-200 mt-1.5 text-center line-clamp-1 w-20">${prod.name.replace('Patch Thêu', '').trim()}</span>
                 <span class="text-[10px] font-bold text-amber-400 mt-0.5">${formatCurrency(prod.price)}</span>
                 <span class="text-[9px] text-stone-400 mt-0.5 flex items-center gap-1 group-hover:text-amber-300">
-                    <i class="fa-solid fa-plus text-[8px]"></i> Thử ngay
+                    <i class="fa-solid fa-plus text-[8px]"></i> Gắn lên áo
                 </span>
             </div>
         `).join('');
     }
 
     addPatchToGarmentById(productId) {
-        const prod = PRODUCTS.find(p => p.id === productId);
+        const productList = (typeof PRODUCTS !== 'undefined' && PRODUCTS.length) ? PRODUCTS : (window.PRODUCTS || []);
+        const prod = productList.find(p => p.id === productId);
         if (!prod) return;
 
         const currentList = this.getCurrentPatches();
         const offsetPct = (currentList.length * 8) % 30;
-        const defaultSize = this.currentView === 'back' ? 120 : 95;
+        const defaultSize = this.currentView === 'back' ? 130 : 95;
 
         this.addPatchToGarment(prod, 40 + offsetPct, 40 + offsetPct, defaultSize);
-        showToast(`Đã gắn "${prod.name}" lên ${this.currentView === 'front' ? 'mặt trước' : 'mặt sau'}!`, 'success');
+        showToast(`Đã gắn "${prod.name}" lên ${this.currentView === 'front' ? 'Mặt Trước' : 'Mặt Sau'}!`, 'success');
     }
 
     addPatchToGarment(product, posXPercent = 40, posYPercent = 40, sizePx = 100) {
@@ -281,6 +287,9 @@ class PatchStudio {
         this.activePatchIndex = index;
         this.isDragging = true;
 
+        if (!this.canvasContainer) {
+            this.canvasContainer = document.getElementById('studio-canvas-container');
+        }
         const rect = this.canvasContainer.getBoundingClientRect();
         const clientX = e.touches ? e.touches[0].clientX : e.clientX;
         const clientY = e.touches ? e.touches[0].clientY : e.clientY;
@@ -300,6 +309,9 @@ class PatchStudio {
 
     onDrag(e) {
         if (!this.isDragging || this.activePatchIndex === null) return;
+        if (!this.canvasContainer) {
+            this.canvasContainer = document.getElementById('studio-canvas-container');
+        }
         const rect = this.canvasContainer.getBoundingClientRect();
         const clientX = e.touches ? e.touches[0].clientX : e.clientX;
         const clientY = e.touches ? e.touches[0].clientY : e.clientY;
@@ -475,6 +487,28 @@ class PatchStudio {
     }
 }
 
+// Global invocation helpers
+function setStudioGarment(garmentId) {
+    if (window.patchStudio) {
+        window.patchStudio.selectGarment(garmentId);
+    }
+}
+
+function setStudioView(view) {
+    if (window.patchStudio) {
+        window.patchStudio.setView(view);
+    }
+}
+
+// Global exports
+if (typeof window !== 'undefined') {
+    window.GARMENTS = GARMENTS;
+    window.PatchStudio = PatchStudio;
+    window.setStudioGarment = setStudioGarment;
+    window.setStudioView = setStudioView;
+}
+
+// Auto init
 document.addEventListener('DOMContentLoaded', () => {
     window.patchStudio = new PatchStudio();
 });
