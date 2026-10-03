@@ -558,40 +558,118 @@
                             </div>
                         </div>
 
-                        <!-- 3. Kiểu Mặt Sau (Backing Options) -->
+                        <!-- 3. Độ Phức Tạp & Mật Độ Mũi Thêu -->
                         <div>
-                            <label class="block text-xs font-bold text-stone-200 uppercase tracking-wider mb-2 font-vintage">
-                                3. Chọn loại mặt sau (Backing)
-                            </label>
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                                <button type="button" onclick="window.patchCalc.setBacking('iron')" class="p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all focus:ring-2 focus:ring-amber-500">
-                                    <i class="fa-solid fa-fire text-amber-400 mb-1 block"></i>
-                                    <div class="font-bold text-stone-200">Keo ủi nhiệt</div>
-                                    <span class="text-[10px] text-stone-400">Ủi áo, nón</span>
+                            <div class="flex items-center justify-between mb-2">
+                                <label class="text-xs font-bold text-stone-200 uppercase tracking-wider font-vintage">
+                                    3. Độ phức tạp & Mật độ mũi thêu
+                                </label>
+                                <span class="text-[11px] text-amber-400 font-bold" id="calc-complexity-hint">Mật độ chuẩn</span>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                                <button type="button" onclick="window.patchCalc.setComplexity('simple', this)" class="calc-complexity-btn p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all">
+                                    <div class="flex items-center gap-1.5 font-bold text-emerald-400 mb-1">
+                                        <i class="fa-solid fa-feather"></i> Mẫu Đơn Giản
+                                    </div>
+                                    <div class="text-[11px] text-stone-300 font-medium">Chữ, viền outline mảnh</div>
+                                    <span class="text-[10px] text-stone-500 block mt-1">Độ phủ ~35% • Tiết kiệm 30%</span>
                                 </button>
-                                <button type="button" onclick="window.patchCalc.setBacking('velcro')" class="p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all focus:ring-2 focus:ring-amber-500">
-                                    <i class="fa-solid fa-grip-lines text-amber-400 mb-1 block"></i>
-                                    <div class="font-bold text-stone-200">Gai Velcro</div>
-                                    <span class="text-[10px] text-stone-400">Cho balo, áo</span>
+                                <button type="button" onclick="window.patchCalc.setComplexity('standard', this)" class="calc-complexity-btn p-3 rounded-xl border border-amber-500 bg-amber-500/15 ring-2 ring-amber-500 text-left text-xs transition-all">
+                                    <div class="flex items-center gap-1.5 font-bold text-amber-400 mb-1">
+                                        <i class="fa-solid fa-shapes"></i> Tiêu Chuẩn
+                                    </div>
+                                    <div class="text-[11px] text-stone-200 font-medium">Logo thường, hình vẽ phẳng</div>
+                                    <span class="text-[10px] text-stone-400 block mt-1">Độ phủ ~65% • Phổ biến nhất</span>
                                 </button>
-                                <button type="button" onclick="window.patchCalc.setBacking('sew')" class="p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all focus:ring-2 focus:ring-amber-500">
-                                    <i class="fa-solid fa-scissors text-amber-400 mb-1 block"></i>
-                                    <div class="font-bold text-stone-200">May viền</div>
-                                    <span class="text-[10px] text-stone-400">May trực tiếp</span>
-                                </button>
-                                <button type="button" onclick="window.patchCalc.setBacking('sticker')" class="p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all focus:ring-2 focus:ring-amber-500">
-                                    <i class="fa-solid fa-tag text-amber-400 mb-1 block"></i>
-                                    <div class="font-bold text-stone-200">Sticker 3M</div>
-                                    <span class="text-[10px] text-stone-400">Dán nón BH, laptop</span>
+                                <button type="button" onclick="window.patchCalc.setComplexity('complex', this)" class="calc-complexity-btn p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all">
+                                    <div class="flex items-center gap-1.5 font-bold text-rose-400 mb-1">
+                                        <i class="fa-solid fa-dragon"></i> Phức Tạp 3D
+                                    </div>
+                                    <div class="text-[11px] text-stone-300 font-medium">Thêu phủ kín 100%, Anime, Hổ</div>
+                                    <span class="text-[10px] text-stone-500 block mt-1">25.000+ mũi dệt đa tầng</span>
                                 </button>
                             </div>
                         </div>
 
-                        <!-- 4. Số lượng đặt thêu -->
+                        <!-- 4. Số Lượng Màu Chỉ & Loại Sợi Chỉ Thêu -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <!-- Màu chỉ -->
+                            <div>
+                                <label class="block text-xs font-bold text-stone-200 uppercase tracking-wider mb-2 font-vintage">
+                                    4. Số màu chỉ thêu
+                                </label>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <button type="button" onclick="window.patchCalc.setColorsCount('1-3', this)" class="calc-color-btn p-2.5 rounded-xl border border-amber-500 bg-amber-500/15 ring-2 ring-amber-500 text-center text-xs transition-all">
+                                        <div class="font-bold text-stone-200">1 – 3 màu</div>
+                                        <span class="text-[10px] text-emerald-400">Chuẩn (+0đ)</span>
+                                    </button>
+                                    <button type="button" onclick="window.patchCalc.setColorsCount('4-6', this)" class="calc-color-btn p-2.5 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-center text-xs transition-all">
+                                        <div class="font-bold text-stone-200">4 – 6 màu</div>
+                                        <span class="text-[10px] text-amber-400">+3.000đ</span>
+                                    </button>
+                                    <button type="button" onclick="window.patchCalc.setColorsCount('7+', this)" class="calc-color-btn p-2.5 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-center text-xs transition-all">
+                                        <div class="font-bold text-stone-200">7 – 10+ màu</div>
+                                        <span class="text-[10px] text-amber-400">+6.000đ</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Loại sợi chỉ -->
+                            <div>
+                                <label class="block text-xs font-bold text-stone-200 uppercase tracking-wider mb-2 font-vintage">
+                                    5. Hiệu ứng sợi chỉ
+                                </label>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <button type="button" onclick="window.patchCalc.setThreadType('standard', this)" class="calc-thread-btn p-2.5 rounded-xl border border-amber-500 bg-amber-500/15 ring-2 ring-amber-500 text-center text-xs transition-all">
+                                        <div class="font-bold text-stone-200">Chỉ Thường</div>
+                                        <span class="text-[10px] text-emerald-400">Polyester (+0)</span>
+                                    </button>
+                                    <button type="button" onclick="window.patchCalc.setThreadType('metallic', this)" class="calc-thread-btn p-2.5 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-center text-xs transition-all">
+                                        <div class="font-bold text-stone-200">Kim Tuyến</div>
+                                        <span class="text-[10px] text-amber-400">Vàng/Bạc (+5K)</span>
+                                    </button>
+                                    <button type="button" onclick="window.patchCalc.setThreadType('glow', this)" class="calc-thread-btn p-2.5 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-center text-xs transition-all">
+                                        <div class="font-bold text-stone-200">Dạ Quang</div>
+                                        <span class="text-[10px] text-amber-400">Phát sáng (+6K)</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6. Kiểu Mặt Sau (Backing Options) -->
+                        <div>
+                            <label class="block text-xs font-bold text-stone-200 uppercase tracking-wider mb-2 font-vintage">
+                                6. Chọn loại mặt sau (Backing)
+                            </label>
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                                <button type="button" onclick="window.patchCalc.setBacking('iron', this)" class="calc-backing-btn p-3 rounded-xl border border-amber-500 bg-amber-500/15 ring-2 ring-amber-500 hover:border-amber-400 text-left text-xs transition-all">
+                                    <i class="fa-solid fa-fire text-amber-400 mb-1 block"></i>
+                                    <div class="font-bold text-stone-200">Keo ủi nhiệt</div>
+                                    <span class="text-[10px] text-stone-400">Ủi áo, nón (+0đ)</span>
+                                </button>
+                                <button type="button" onclick="window.patchCalc.setBacking('velcro', this)" class="calc-backing-btn p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all">
+                                    <i class="fa-solid fa-grip-lines text-amber-400 mb-1 block"></i>
+                                    <div class="font-bold text-stone-200">Gai Velcro</div>
+                                    <span class="text-[10px] text-stone-400">Cho balo (+8K)</span>
+                                </button>
+                                <button type="button" onclick="window.patchCalc.setBacking('sew', this)" class="calc-backing-btn p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all">
+                                    <i class="fa-solid fa-scissors text-amber-400 mb-1 block"></i>
+                                    <div class="font-bold text-stone-200">May viền</div>
+                                    <span class="text-[10px] text-stone-400">May trực tiếp (+0đ)</span>
+                                </button>
+                                <button type="button" onclick="window.patchCalc.setBacking('sticker', this)" class="calc-backing-btn p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all">
+                                    <i class="fa-solid fa-tag text-amber-400 mb-1 block"></i>
+                                    <div class="font-bold text-stone-200">Sticker 3M</div>
+                                    <span class="text-[10px] text-stone-400">Dán nón BH (+4K)</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 7. Số lượng đặt thêu -->
                         <div>
                             <div class="flex justify-between items-center mb-2">
                                 <label class="text-xs font-bold text-stone-200 uppercase tracking-wider font-vintage">
-                                    4. Số lượng cần thêu (Cái)
+                                    7. Số lượng cần thêu (Cái)
                                 </label>
                                 <span class="text-xs text-amber-400 font-bold" id="calc-tier-badge">Đơn nhóm nhỏ - Giảm 30%</span>
                             </div>
@@ -626,6 +704,18 @@
 
                             <div class="space-y-3 text-xs">
                                 <div class="flex justify-between items-center">
+                                    <span class="text-stone-400">Ước tính số mũi thêu:</span>
+                                    <span id="calc-estimated-stitches" class="text-xs font-bold text-amber-400">~13.500 mũi chỉ</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-stone-400">Độ phức tạp:</span>
+                                    <span id="calc-complexity-display" class="text-xs font-medium text-stone-200">Tiêu chuẩn (Độ phủ ~65%)</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-stone-400">Số màu & loại chỉ:</span>
+                                    <span id="calc-thread-display" class="text-xs font-medium text-stone-200">1 – 3 màu • Chỉ thêu tiêu chuẩn</span>
+                                </div>
+                                <div class="flex justify-between items-center pt-2 border-t border-stone-800/80">
                                     <span class="text-stone-400">Đơn giá ước tính:</span>
                                     <span id="calc-unit-price" class="text-sm font-bold text-white">45.000đ</span>
                                 </div>
