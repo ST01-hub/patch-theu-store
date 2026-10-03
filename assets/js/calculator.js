@@ -466,9 +466,9 @@ class PatchCalculator {
         const digitizingFee = digitizingInfo.fee;
         const baseFilmFee = digitizingInfo.originalFee;
 
-        // 8. Đơn giá cơ sở:
-        // Chi phí gốc dựa trên số mũi thêu: 22.000đ cố định + (số mũi x 1.55đ)
-        let rawUnitPrice = (22000 + (estimatedStitches * 1.55)) * complexityFactor;
+        // 8. Đơn giá cơ sở tính theo DIỆN TÍCH PATCH THÊU (cm2):
+        // Công thức: (Chi phí định mức ban đầu + Diện tích cm2 x Đơn giá mỗi cm2) x Hệ số độ phức tạp
+        let rawUnitPrice = (32000 + (area * 360)) * complexityFactor;
 
         // Áp dụng chiết khấu số lượng + các phụ phí per-item
         let unitPrice = Math.round(((rawUnitPrice * qtyDiscountFactor) + colorExtra + threadExtra + backingExtra) / 500) * 500;
@@ -519,6 +519,11 @@ class PatchCalculator {
 
         if (tierElem) tierElem.textContent = tierLabel;
         if (daysElem) daysElem.textContent = prodDays;
+        
+        const areaElem = document.getElementById('calc-area-display');
+        const formattedArea = (area % 1 === 0 ? area : area.toFixed(2));
+        if (areaElem) areaElem.textContent = `${formattedArea} cm² (${width} × ${height} cm)`;
+
         if (stitchesElem) stitchesElem.textContent = `~${estimatedStitches.toLocaleString('vi-VN')} mũi chỉ (${sizeCategory.name})`;
         if (complexityDisplayElem) complexityDisplayElem.textContent = complexityName;
         if (threadDisplayElem) threadDisplayElem.textContent = `${colorName.split('(')[0].trim()} • ${threadName.split('(')[0].trim()}`;
@@ -533,6 +538,7 @@ class PatchCalculator {
             quantity,
             width,
             height,
+            area: formattedArea,
             sizeCategoryName: sizeCategory.name,
             estimatedStitches,
             complexityName,
@@ -548,7 +554,7 @@ class PatchCalculator {
         const res = this.calculatedResult;
 
         const summaryText = `🧵 YÊU CẦU BÁO GIÁ ĐẶT THÊU - XƯỞNG VALEE:
-- Kích thước: ${res.width} x ${res.height} cm (${res.sizeCategoryName})
+- Kích thước: ${res.width} x ${res.height} cm (${res.sizeCategoryName} - Diện tích: ${res.area} cm²)
 - Mật độ mũi thêu ước tính: ~${res.estimatedStitches.toLocaleString('vi-VN')} mũi
 - Mức độ phức tạp: ${res.complexityName}
 - Số màu chỉ: ${res.colorName}
