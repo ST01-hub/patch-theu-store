@@ -401,21 +401,21 @@ class PatchCalculator {
 
         // 2. Mật độ mũi thêu & Hệ số đơn giá kỹ thuật theo 4 cấp bậc
         let densityStitchesPerCm2 = 240;
-        let complexityFactor = 1.0;
-        let complexityName = 'Tiêu chuẩn (Độ phủ ~65%)';
+        let complexityFactor = 1.35; // Tiêu chuẩn: ×1.35
+        let complexityName = 'Tiêu chuẩn (Logo phẳng, mảng satin vừa)';
 
         if (complexity === 'simple') {
             densityStitchesPerCm2 = 120; // Nét mảnh, outline, chữ
-            complexityFactor = 0.70;
-            complexityName = 'Đơn Giản (Chữ / Nét mảnh / Phủ ~35%)';
+            complexityFactor = 1.00;
+            complexityName = 'Đơn Giản (Nét mảnh, chữ, viền outline)';
         } else if (complexity === 'complex') {
             densityStitchesPerCm2 = 390; // Phủ kín nhiều chi tiết, tranh thêu
-            complexityFactor = 1.35;
-            complexityName = 'Phức Tạp (Chi tiết cao / Thêu phủ kín 100%)';
+            complexityFactor = 1.70;
+            complexityName = 'Phức Tạp (Tranh thêu, tatami phủ kín 100% nền)';
         } else if (complexity === 'complex_3d') {
             densityStitchesPerCm2 = 520; // Thêu nổi 3D đa tầng xốp EVA
-            complexityFactor = 1.70;
-            complexityName = 'Phức Tạp 3D (Thêu nổi xốp 3D / Đa tầng)';
+            complexityFactor = 2.20;
+            complexityName = 'Phức Tạp 3D (Thêu nổi khối xốp EVA / 3D PU foam)';
         }
 
         const estimatedStitches = Math.max(2000, Math.round((area * densityStitchesPerCm2) / 100) * 100);
@@ -468,7 +468,7 @@ class PatchCalculator {
 
         // 8. Đơn giá cơ sở tính theo DIỆN TÍCH PATCH THÊU (cm2):
         // Công thức: (Chi phí định mức ban đầu + Diện tích cm2 x Đơn giá mỗi cm2) x Hệ số độ phức tạp
-        let rawUnitPrice = (32000 + (area * 360)) * complexityFactor;
+        let rawUnitPrice = (25000 + (area * 300)) * complexityFactor;
 
         // Áp dụng chiết khấu số lượng + các phụ phí per-item
         let unitPrice = Math.round(((rawUnitPrice * qtyDiscountFactor) + colorExtra + threadExtra + backingExtra) / 500) * 500;
