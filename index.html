@@ -539,77 +539,91 @@
 
                         <!-- 2. Kích thước (Dimensions) -->
                         <div>
-                            <label class="block text-xs font-bold text-stone-200 uppercase tracking-wider mb-2 font-vintage">
-                                2. Kích thước mong muốn (Rộng x Cao cm)
-                            </label>
+                            <div class="flex items-center justify-between mb-2">
+                                <label class="text-xs font-bold text-stone-200 uppercase tracking-wider font-vintage">
+                                    2. Kích thước mong muốn (Rộng x Cao cm)
+                                </label>
+                                <span class="text-xs text-amber-400 font-bold" id="calc-size-category-badge">Tiêu chuẩn (7.5x7.5 cm)</span>
+                            </div>
 
                             <!-- Size Presets -->
-                            <div id="calc-size-presets" class="grid grid-cols-2 sm:grid-cols-3 gap-2.5 mb-3"></div>
+                            <div id="calc-size-presets" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mb-3"></div>
 
                             <div class="grid grid-cols-2 gap-3 bg-stone-950 p-3 rounded-xl border border-stone-800">
                                 <div>
                                     <span class="text-[11px] text-stone-400 block mb-1">Chiều Rộng (cm):</span>
-                                    <input type="number" id="calc-width" value="7.5" min="3" max="30" step="0.5" class="w-full bg-stone-900 border border-stone-750 rounded-lg px-3 py-1.5 text-xs text-stone-100 font-bold">
+                                    <input type="number" id="calc-width" value="7.5" min="3" max="50" step="0.5" class="w-full bg-stone-900 border border-stone-750 rounded-lg px-3 py-1.5 text-xs text-stone-100 font-bold focus:border-amber-400">
                                 </div>
                                 <div>
                                     <span class="text-[11px] text-stone-400 block mb-1">Chiều Cao (cm):</span>
-                                    <input type="number" id="calc-height" value="7.5" min="3" max="30" step="0.5" class="w-full bg-stone-900 border border-stone-750 rounded-lg px-3 py-1.5 text-xs text-stone-100 font-bold">
+                                    <input type="number" id="calc-height" value="7.5" min="3" max="50" step="0.5" class="w-full bg-stone-900 border border-stone-750 rounded-lg px-3 py-1.5 text-xs text-stone-100 font-bold focus:border-amber-400">
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 3. Độ Phức Tạp & Mật Độ Mũi Thêu -->
+                        <!-- 3. Độ Phức Tạp & Mật Độ Mũi Thêu (4 Cấp bậc) -->
                         <div>
                             <div class="flex items-center justify-between mb-2">
                                 <label class="text-xs font-bold text-stone-200 uppercase tracking-wider font-vintage">
-                                    3. Độ phức tạp & Mật độ mũi thêu
+                                    3. Độ phức tạp & Mức độ chỉ thêu (4 Cấp bậc)
                                 </label>
-                                <span class="text-[11px] text-amber-400 font-bold" id="calc-complexity-hint">Mật độ chuẩn</span>
+                                <span class="text-[11px] text-amber-400 font-bold" id="calc-complexity-hint">Mật độ & Phí Film</span>
                             </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
                                 <button type="button" onclick="window.patchCalc.setComplexity('simple', this)" class="calc-complexity-btn p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all">
                                     <div class="flex items-center gap-1.5 font-bold text-emerald-400 mb-1">
-                                        <i class="fa-solid fa-feather"></i> Mẫu Đơn Giản
+                                        <i class="fa-solid fa-feather"></i> Đơn Giản
                                     </div>
                                     <div class="text-[11px] text-stone-300 font-medium">Chữ, viền outline mảnh</div>
-                                    <span class="text-[10px] text-stone-500 block mt-1">Độ phủ ~35% • Tiết kiệm 30%</span>
+                                    <div class="text-[10px] text-amber-400/90 mt-1 font-mono">Film: 50K | 25K | Free ≥21</div>
+                                    <span class="text-[10px] text-stone-500 block mt-0.5">Phủ ~35% • Tiết kiệm 30%</span>
                                 </button>
                                 <button type="button" onclick="window.patchCalc.setComplexity('standard', this)" class="calc-complexity-btn p-3 rounded-xl border border-amber-500 bg-amber-500/15 ring-2 ring-amber-500 text-left text-xs transition-all">
                                     <div class="flex items-center gap-1.5 font-bold text-amber-400 mb-1">
                                         <i class="fa-solid fa-shapes"></i> Tiêu Chuẩn
                                     </div>
-                                    <div class="text-[11px] text-stone-200 font-medium">Logo thường, hình vẽ phẳng</div>
-                                    <span class="text-[10px] text-stone-400 block mt-1">Độ phủ ~65% • Phổ biến nhất</span>
+                                    <div class="text-[11px] text-stone-200 font-medium">Logo phẳng, mảng màu vừa</div>
+                                    <div class="text-[10px] text-amber-400/90 mt-1 font-mono">Film: 80K | 45K | Free ≥21</div>
+                                    <span class="text-[10px] text-stone-400 block mt-0.5">Phủ ~65% • Chuẩn phổ biến</span>
                                 </button>
                                 <button type="button" onclick="window.patchCalc.setComplexity('complex', this)" class="calc-complexity-btn p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all">
+                                    <div class="flex items-center gap-1.5 font-bold text-orange-400 mb-1">
+                                        <i class="fa-solid fa-palette"></i> Phức Tạp
+                                    </div>
+                                    <div class="text-[11px] text-stone-300 font-medium">Tranh thêu, phủ kín 100%</div>
+                                    <div class="text-[10px] text-amber-400/90 mt-1 font-mono">Film: 120K | 68K | Free ≥21</div>
+                                    <span class="text-[10px] text-stone-500 block mt-0.5">Chi tiết cao, đan mũi dày</span>
+                                </button>
+                                <button type="button" onclick="window.patchCalc.setComplexity('complex_3d', this)" class="calc-complexity-btn p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all">
                                     <div class="flex items-center gap-1.5 font-bold text-rose-400 mb-1">
                                         <i class="fa-solid fa-dragon"></i> Phức Tạp 3D
                                     </div>
-                                    <div class="text-[11px] text-stone-300 font-medium">Thêu phủ kín 100%, Anime, Hổ</div>
-                                    <span class="text-[10px] text-stone-500 block mt-1">25.000+ mũi dệt đa tầng</span>
+                                    <div class="text-[11px] text-stone-300 font-medium">Thêu nổi xốp EVA / 3D</div>
+                                    <div class="text-[10px] text-amber-400/90 mt-1 font-mono">Film: 180K | 90K | Free ≥21</div>
+                                    <span class="text-[10px] text-stone-500 block mt-0.5">Nổi khối 3D cao cấp</span>
                                 </button>
                             </div>
                         </div>
 
                         <!-- 4. Số Lượng Màu Chỉ & Loại Sợi Chỉ Thêu -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
                             <!-- Màu chỉ -->
                             <div>
                                 <label class="block text-xs font-bold text-stone-200 uppercase tracking-wider mb-2 font-vintage">
                                     4. Số màu chỉ thêu
                                 </label>
                                 <div class="grid grid-cols-3 gap-2">
-                                    <button type="button" onclick="window.patchCalc.setColorsCount('1-3', this)" class="calc-color-btn p-2.5 rounded-xl border border-amber-500 bg-amber-500/15 ring-2 ring-amber-500 text-center text-xs transition-all">
-                                        <div class="font-bold text-stone-200">1 – 3 màu</div>
-                                        <span class="text-[10px] text-emerald-400">Chuẩn (+0đ)</span>
+                                    <button type="button" onclick="window.patchCalc.setColorsCount('1-2', this)" class="calc-color-btn p-2.5 rounded-xl border border-amber-500 bg-amber-500/15 ring-2 ring-amber-500 text-center text-xs transition-all">
+                                        <div class="font-bold text-stone-200">1 – 2 màu</div>
+                                        <span class="text-[10px] text-emerald-400 font-medium">Cơ bản (+0đ)</span>
                                     </button>
-                                    <button type="button" onclick="window.patchCalc.setColorsCount('4-6', this)" class="calc-color-btn p-2.5 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-center text-xs transition-all">
-                                        <div class="font-bold text-stone-200">4 – 6 màu</div>
-                                        <span class="text-[10px] text-amber-400">+3.000đ</span>
+                                    <button type="button" onclick="window.patchCalc.setColorsCount('3-6', this)" class="calc-color-btn p-2.5 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-center text-xs transition-all">
+                                        <div class="font-bold text-stone-200">3 – 6 màu</div>
+                                        <span class="text-[10px] text-amber-400 font-medium">+3.000đ/cái</span>
                                     </button>
                                     <button type="button" onclick="window.patchCalc.setColorsCount('7+', this)" class="calc-color-btn p-2.5 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-center text-xs transition-all">
                                         <div class="font-bold text-stone-200">7 – 10+ màu</div>
-                                        <span class="text-[10px] text-amber-400">+6.000đ</span>
+                                        <span class="text-[10px] text-amber-400 font-medium">+6.000đ/cái</span>
                                     </button>
                                 </div>
                             </div>
@@ -617,55 +631,84 @@
                             <!-- Loại sợi chỉ -->
                             <div>
                                 <label class="block text-xs font-bold text-stone-200 uppercase tracking-wider mb-2 font-vintage">
-                                    5. Hiệu ứng sợi chỉ
+                                    5. Hiệu ứng sợi chỉ thêu
                                 </label>
-                                <div class="grid grid-cols-3 gap-2">
+                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
                                     <button type="button" onclick="window.patchCalc.setThreadType('standard', this)" class="calc-thread-btn p-2.5 rounded-xl border border-amber-500 bg-amber-500/15 ring-2 ring-amber-500 text-center text-xs transition-all">
-                                        <div class="font-bold text-stone-200">Chỉ Thường</div>
-                                        <span class="text-[10px] text-emerald-400">Polyester (+0)</span>
+                                        <div class="font-bold text-stone-200">Polyester</div>
+                                        <span class="text-[10px] text-emerald-400">Tiêu chuẩn (+0)</span>
                                     </button>
                                     <button type="button" onclick="window.patchCalc.setThreadType('metallic', this)" class="calc-thread-btn p-2.5 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-center text-xs transition-all">
                                         <div class="font-bold text-stone-200">Kim Tuyến</div>
-                                        <span class="text-[10px] text-amber-400">Vàng/Bạc (+5K)</span>
+                                        <span class="text-[10px] text-amber-400">+5K/màu</span>
                                     </button>
                                     <button type="button" onclick="window.patchCalc.setThreadType('glow', this)" class="calc-thread-btn p-2.5 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-center text-xs transition-all">
                                         <div class="font-bold text-stone-200">Dạ Quang</div>
-                                        <span class="text-[10px] text-amber-400">Phát sáng (+6K)</span>
+                                        <span class="text-[10px] text-amber-400">+18K/cái</span>
                                     </button>
+                                    <button type="button" onclick="window.patchCalc.setThreadType('both', this)" class="calc-thread-btn p-2.5 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-center text-xs transition-all">
+                                        <div class="font-bold text-stone-200">Kết Hợp</div>
+                                        <span class="text-[10px] text-amber-400">Kim tuyến + Glow</span>
+                                    </button>
+                                </div>
+
+                                <!-- Sub-selector for Metallic thread colors -->
+                                <div id="calc-metallic-options" class="hidden mt-2 p-2.5 rounded-xl bg-stone-900 border border-amber-500/30 flex items-center justify-between text-xs">
+                                    <span class="text-stone-300 text-[11px]">Số màu kim tuyến:</span>
+                                    <div class="flex gap-1.5">
+                                        <button type="button" id="metallic-btn-1" onclick="window.patchCalc.setMetallicColors(1)" class="calc-metallic-color-btn px-2.5 py-1 rounded-lg text-xs bg-amber-500 text-stone-950 font-black">1 màu (+5K)</button>
+                                        <button type="button" id="metallic-btn-2" onclick="window.patchCalc.setMetallicColors(2)" class="calc-metallic-color-btn px-2.5 py-1 rounded-lg text-xs bg-stone-900 text-stone-300">2 màu (+10K)</button>
+                                        <button type="button" id="metallic-btn-3" onclick="window.patchCalc.setMetallicColors(3)" class="calc-metallic-color-btn px-2.5 py-1 rounded-lg text-xs bg-stone-900 text-stone-300">3 màu (+15K)</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- 6. Kiểu Mặt Sau (Backing Options) -->
+                        <!-- 6. Kiểu Mặt Sau (Backing Options - 5 Tùy Chọn) -->
                         <div>
                             <label class="block text-xs font-bold text-stone-200 uppercase tracking-wider mb-2 font-vintage">
                                 6. Chọn loại mặt sau (Backing)
                             </label>
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
                                 <button type="button" onclick="window.patchCalc.setBacking('iron', this)" class="calc-backing-btn p-3 rounded-xl border border-amber-500 bg-amber-500/15 ring-2 ring-amber-500 hover:border-amber-400 text-left text-xs transition-all">
                                     <i class="fa-solid fa-fire text-amber-400 mb-1 block"></i>
                                     <div class="font-bold text-stone-200">Keo ủi nhiệt</div>
-                                    <span class="text-[10px] text-stone-400">Ủi áo, nón (+0đ)</span>
+                                    <span class="text-[10px] text-stone-400 block mt-0.5">1-5 cái Free | ≥6 cái: 500đ - 3.5K</span>
                                 </button>
                                 <button type="button" onclick="window.patchCalc.setBacking('velcro', this)" class="calc-backing-btn p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all">
                                     <i class="fa-solid fa-grip-lines text-amber-400 mb-1 block"></i>
                                     <div class="font-bold text-stone-200">Gai Velcro</div>
-                                    <span class="text-[10px] text-stone-400">Cho balo (+8K)</span>
-                                </button>
-                                <button type="button" onclick="window.patchCalc.setBacking('sew', this)" class="calc-backing-btn p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all">
-                                    <i class="fa-solid fa-scissors text-amber-400 mb-1 block"></i>
-                                    <div class="font-bold text-stone-200">May viền</div>
-                                    <span class="text-[10px] text-stone-400">May trực tiếp (+0đ)</span>
+                                    <span class="text-[10px] text-stone-400 block mt-0.5">Balo, áo lính: 15K - 25K/cái</span>
                                 </button>
                                 <button type="button" onclick="window.patchCalc.setBacking('sticker', this)" class="calc-backing-btn p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all">
                                     <i class="fa-solid fa-tag text-amber-400 mb-1 block"></i>
-                                    <div class="font-bold text-stone-200">Sticker 3M</div>
-                                    <span class="text-[10px] text-stone-400">Dán nón BH (+4K)</span>
+                                    <div class="font-bold text-stone-200">Keo dán 3M</div>
+                                    <span class="text-[10px] text-stone-400 block mt-0.5">Nón BH, laptop: 3K - 15K/cái</span>
                                 </button>
+                                <button type="button" onclick="window.patchCalc.setBacking('none', this)" class="calc-backing-btn p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all">
+                                    <i class="fa-solid fa-scissors text-amber-400 mb-1 block"></i>
+                                    <div class="font-bold text-stone-200">Không dùng</div>
+                                    <span class="text-[10px] text-stone-400 block mt-0.5">May viền trực tiếp (+0đ)</span>
+                                </button>
+                                <button type="button" onclick="window.patchCalc.setBacking('custom', this)" class="calc-backing-btn p-3 rounded-xl border border-stone-750 bg-stone-950 hover:border-amber-400 text-left text-xs transition-all">
+                                    <i class="fa-solid fa-sliders text-amber-400 mb-1 block"></i>
+                                    <div class="font-bold text-stone-200">Vật liệu khác</div>
+                                    <span class="text-[10px] text-amber-400 block mt-0.5">Báo giá theo yêu cầu</span>
+                                </button>
+                            </div>
+
+                            <!-- Ô nhập vật liệu khác -->
+                            <div id="calc-custom-backing-box" class="hidden mt-2.5">
+                                <div class="p-3 rounded-xl bg-stone-900 border border-amber-500/40 space-y-1.5">
+                                    <label class="text-[11px] font-semibold text-amber-300 block">
+                                        <i class="fa-solid fa-pen-to-square mr-1"></i> Nhập loại vật liệu mặt sau mong muốn (Giá sẽ được Valee báo sau khi nhận yêu cầu):
+                                    </label>
+                                    <input type="text" id="calc-custom-backing-input" placeholder="Ví dụ: Nam châm hít áo, kim băng brooch cài áo, viền da lót nẹp, đinh tán rivet..." class="w-full bg-stone-950 border border-stone-700 rounded-lg px-3 py-2 text-xs text-stone-100 placeholder-stone-500 focus:outline-none focus:border-amber-400">
+                                </div>
                             </div>
                         </div>
 
-                        <!-- 7. Số lượng đặt thêu -->
+                        <!-- 7. Số lượng đặt thêu & Chiết khấu bậc thang -->
                         <div>
                             <div class="flex justify-between items-center mb-2">
                                 <label class="text-xs font-bold text-stone-200 uppercase tracking-wider font-vintage">
@@ -674,14 +717,20 @@
                                 <span class="text-xs text-amber-400 font-bold" id="calc-tier-badge">Đơn nhóm nhỏ - Giảm 30%</span>
                             </div>
 
-                            <div class="flex items-center gap-3">
-                                <input type="number" id="calc-quantity" value="10" min="1" max="10000" class="w-28 bg-stone-950 border border-stone-750 rounded-xl px-4 py-2 text-sm text-amber-400 font-black text-center focus:outline-none focus:border-amber-400">
-                                <div class="flex flex-wrap gap-1.5 flex-1">
-                                    <button type="button" onclick="window.patchCalc.setQuantity(1)" class="px-3 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold">1 cái</button>
-                                    <button type="button" onclick="window.patchCalc.setQuantity(5)" class="px-3 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold">5 cái</button>
-                                    <button type="button" onclick="window.patchCalc.setQuantity(10)" class="px-3 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold">10 cái</button>
-                                    <button type="button" onclick="window.patchCalc.setQuantity(30)" class="px-3 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold">30 cái</button>
-                                    <button type="button" onclick="window.patchCalc.setQuantity(100)" class="px-3 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold">100+ cái</button>
+                            <div class="space-y-2">
+                                <div class="flex items-center gap-3">
+                                    <input type="number" id="calc-quantity" value="10" min="1" max="10000" class="w-32 bg-stone-950 border border-stone-750 rounded-xl px-4 py-2 text-sm text-amber-400 font-black text-center focus:outline-none focus:border-amber-400">
+                                    <div class="text-[11px] text-stone-400">Nhập số lượng tùy ý hoặc bấm nhanh:</div>
+                                </div>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <button type="button" onclick="window.patchCalc.setQuantity(1)" class="px-2.5 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold text-stone-300">1 cái (Gốc)</button>
+                                    <button type="button" onclick="window.patchCalc.setQuantity(5)" class="px-2.5 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold text-stone-300">5 cái (-30%)</button>
+                                    <button type="button" onclick="window.patchCalc.setQuantity(10)" class="px-2.5 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold text-stone-300">10 cái (-30%)</button>
+                                    <button type="button" onclick="window.patchCalc.setQuantity(21)" class="px-2.5 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold text-amber-300 border border-amber-500/40">21 cái (-48% & Free Film)</button>
+                                    <button type="button" onclick="window.patchCalc.setQuantity(50)" class="px-2.5 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold text-stone-300">50 cái (-72%)</button>
+                                    <button type="button" onclick="window.patchCalc.setQuantity(100)" class="px-2.5 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold text-stone-300">100 cái (-78%)</button>
+                                    <button type="button" onclick="window.patchCalc.setQuantity(200)" class="px-2.5 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold text-stone-300">200 cái (-90%)</button>
+                                    <button type="button" onclick="window.patchCalc.setQuantity(1000)" class="px-2.5 py-1 bg-stone-900 hover:bg-stone-800 rounded-lg text-xs font-semibold text-emerald-400 font-bold">1000+ cái (-95%)</button>
                                 </div>
                             </div>
                         </div>
@@ -713,7 +762,11 @@
                                 </div>
                                 <div class="flex justify-between items-center">
                                     <span class="text-stone-400">Số màu & loại chỉ:</span>
-                                    <span id="calc-thread-display" class="text-xs font-medium text-stone-200">1 – 3 màu • Chỉ thêu tiêu chuẩn</span>
+                                    <span id="calc-thread-display" class="text-xs font-medium text-stone-200">1 – 2 màu • Chỉ Polyester</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="text-stone-400">Kiểu mặt sau (Backing):</span>
+                                    <span id="calc-backing-display" class="text-xs font-medium text-stone-200">Keo ủi nhiệt</span>
                                 </div>
                                 <div class="flex justify-between items-center pt-2 border-t border-stone-800/80">
                                     <span class="text-stone-400">Đơn giá ước tính:</span>
